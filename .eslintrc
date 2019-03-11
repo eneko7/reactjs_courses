@@ -1,0 +1,16 @@
+{
+    "extends": "airbnb",
+    "env": {
+      "jest": true,
+      "node": true,
+      "browser": true
+    },
+    "plugins": [
+      "react-hooks"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "import/no-extraneous-dependencies": ["error", { "devDependencies": ["/*", "**/*.config.js", "**/*.test.js", "**/*.spec.jsx"]}],
+      "react-hooks/rules-of-hooks": "error"
+    }
+  }
