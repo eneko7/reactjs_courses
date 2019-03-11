@@ -1,18 +1,6 @@
-import React, { Fragment } from 'react';
-import WelcomComponent from './WelcomComponent/WelcomComponent';
-import WelcomPureComponent from './WelcomPureComponent/WelcomPureComponent';
-import WelcomFunction from './WelcomFunction/WelcomFunction';
+/* eslint-disable import/no-extraneous-dependencies */
 
-const WelcomCreateElement = React.createElement('div', null, 'Hello World - first method - React.CreateElement');
+import { hot } from 'react-hot-loader';
+import App from './App/App';
 
-const Root = () => (
-  <Fragment>
-    {WelcomCreateElement}
-    <WelcomComponent />
-    <WelcomPureComponent />
-    <WelcomFunction />
-  </Fragment>
-
-);
-
-export default Root;
+export default hot(module)(App);

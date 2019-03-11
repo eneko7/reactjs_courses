@@ -7,14 +7,14 @@ const webpack = require('webpack');
 
 module.exports = merge(require('./webpack.base.config'), {
   output: {
-    path: path.resolve(__dirname, '../build'),
+    path: path.resolve(__dirname, '../../build'),
     filename: '[name].[hash].js',
     publicPath: 'build',
   },
   mode: 'production',
   devtool: 'none',
   entry: [
-    path.join(__dirname, '../src/index.jsx'),
+    path.join(__dirname, '../../src/index.jsx'),
   ],
   optimization: {
     runtimeChunk: 'single',

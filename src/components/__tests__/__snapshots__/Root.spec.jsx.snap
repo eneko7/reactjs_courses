@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Root renders correctly 1`] = `
-<React.Fragment>
+<ErrorBoundary>
   <div>
     Hello World - first method - React.CreateElement
   </div>
   <WelcomComponent />
   <WelcomPureComponent />
   <WelcomFunction />
-</React.Fragment>
+</ErrorBoundary>
 `;

@@ -9,7 +9,7 @@ module.exports = {
   testRegex: '/__tests__/.*\\.spec\\.jsx$',
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{js,jsx}'],
-  coveragePathIgnorePatterns: ['src/index.js', 'src/store.js'],
+  coveragePathIgnorePatterns: ['src/index.js', 'src/store.js', 'components/ErrorBoundary/ErrorBoundary.jsx'],
   coverageThreshold: {
     global: {
       branches: 100,
