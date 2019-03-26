@@ -1,0 +1,25 @@
+@import "../../assets/constants/constants.scss";
+
+.resultLine {
+  padding: 1% 15%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+
+  .countFoundFilms {
+    font-family: $fontFamilyBold;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: $mdSize) {
+  .resultLine {
+    padding: 1% 5%;
+    display: block;
+    text-align: right;
+
+    .countFoundFilms {
+      font-size: 18px;
+    }
+  }
+}

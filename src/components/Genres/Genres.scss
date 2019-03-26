@@ -1,0 +1,13 @@
+@import "../../assets/constants/constants.scss";
+
+.genres {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 10px 20px;
+
+
+  .genre {
+    font-family: $fontFamilyRegular;
+    margin-right: 10px;
+  }
+}
