@@ -1,0 +1,15 @@
+@import "../../assets/constants/constants.scss";
+
+.MoviesGrid {
+  padding: 3% 15%;
+  background-color: #f3efef96;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: $mdSize) {
+  .MoviesGrid {
+      padding: 1% 5%;
+  }
+}

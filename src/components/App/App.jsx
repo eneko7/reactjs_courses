@@ -1,16 +1,20 @@
 import React from 'react';
-import WelcomComponent from '../WelcomComponent/WelcomComponent';
-import WelcomPureComponent from '../WelcomPureComponent/WelcomPureComponent';
-import WelcomFunction from '../WelcomFunction/WelcomFunction';
+import Header from '../Header';
+import ResultLine from '../ResultLine';
+import MoviesGrid from '../MoviesGrid/MoviesGrid';
+import Footer from '../Footer';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
+import styles from './App.scss';
 
 const App = () => (
-  <ErrorBoundary>
-    {React.createElement('div', null, 'Hello World - first method - React.CreateElement')}
-    <WelcomComponent />
-    <WelcomPureComponent />
-    <WelcomFunction />
-  </ErrorBoundary>
+  <main className={styles.main}>
+    <ErrorBoundary>
+      <Header />
+      <ResultLine />
+      <MoviesGrid />
+      <Footer />
+    </ErrorBoundary>
+  </main>
 
 );
 

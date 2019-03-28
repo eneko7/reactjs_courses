@@ -1,0 +1,44 @@
+@import "../../../assets/constants/constants.scss";
+
+.search_input {
+  height: 50px;
+  width: 100%;
+  background-color: #000;
+  position: relative;
+  border: none;
+  border-bottom: 2px solid $roseColor;
+  z-index: 3;
+  color: white;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.search_input:focus {
+  outline: none;
+}
+
+.search_input::placeholder {
+  color: #FFF;
+  opacity: 0.8;
+}
+
+.search_icon {
+  color: #FFF;
+  position: absolute;
+  z-index: 3;
+  right: 15%;
+  font-size: 30px;
+  width: 40px;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: $mdSize) {
+  .search_input {
+    font-size: 16px;
+  }
+
+  .search_icon {
+    right: 5%;
+  }
+}

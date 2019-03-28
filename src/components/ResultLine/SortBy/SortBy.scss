@@ -1,0 +1,18 @@
+@import "../../../assets/constants/constants.scss";
+
+.sortBy {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.sortBy_span {
+  font-family: $fontFamilyBold;
+  font-size: 20px;
+}
+
+@media (max-width: $mdSize) {
+  .sortBy {
+    width: 80%;
+  }
+}
