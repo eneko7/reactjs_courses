@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBy renders correctly 1`] = `
+<div
+  className="searchBy_wrapper"
+>
+  <span
+    className="searchBy_title"
+  >
+    SEARCH BY
+  </span>
+  <SortInput
+    defaultChecked="defaultChecked"
+    id="TITLE"
+    inputClass="searchType_input"
+    labelClass="searchType_button"
+    name="searchBy"
+    text="TITLE"
+  />
+  <SortInput
+    defaultChecked=""
+    id="GENRE"
+    inputClass="searchType_input"
+    labelClass="searchType_button"
+    name="searchBy"
+    text="GENRE"
+  />
+</div>
+`;

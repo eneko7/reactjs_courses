@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`WelcomPureComponent renders correctly 1`] = `
-<div>
-  Hello World - third method - React.PureComponent
-</div>
-`;
