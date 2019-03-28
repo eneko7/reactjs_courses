@@ -1,1 +1,1 @@
-export { default } from './SortByIndex';
+export { default } from './SortInput';

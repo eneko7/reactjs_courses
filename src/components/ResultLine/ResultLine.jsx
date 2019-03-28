@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './ResultLine.scss';
-import SortBy from './SortBy/SortBy';
+import SortBy from './SortBy';
 
 const ResultLine = () => (
   <div className={styles.resultLine}>

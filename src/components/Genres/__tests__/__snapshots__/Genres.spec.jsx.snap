@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Genres renders correctly 1`] = `
+<div
+  className="genres"
+>
+  <span
+    className="genre"
+  >
+    Drama
+  </span>
+  <span
+    className="genre"
+  >
+    History
+  </span>
+  <span
+    className="genre"
+  >
+    Comedy
+  </span>
+</div>
+`;
+
+exports[`Genres renders with failed data correctly 1`] = `null`;

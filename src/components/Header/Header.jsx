@@ -1,8 +1,8 @@
 import React from 'react';
-import Logo from './Logo/Logo';
-import Search from './Search/Search';
-import SearchBy from './SearchBy/SearchBy';
-import Button from '../Button/Button';
+import Logo from '../Logo';
+import Search from './Search';
+import SearchBy from './SearchBy';
+import Button from '../Button';
 import styles from './Header.scss';
 
 const Header = () => (

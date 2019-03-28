@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders correctly 1`] = `
+<React.Fragment>
+  <input
+    className="search_input"
+    name="search"
+    placeholder="Film name"
+    type="text"
+  />
+  <span
+    className="search_icon"
+  >
+    ↩
+  </span>
+</React.Fragment>
+`;
