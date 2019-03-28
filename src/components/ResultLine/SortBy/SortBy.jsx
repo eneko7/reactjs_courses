@@ -1,5 +1,5 @@
 import React from 'react';
-import SortInput from '../../SortInput';
+import SortInput from '../../SortInput/SortInput';
 import styles from './SortBy.scss';
 
 const SortBy = () => (
