@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading renders correctly 1`] = `
+<div
+  className="loading"
+>
+  <div
+    className="moviesGrid_wrapper_loading"
+    id="loading"
+  >
+    <div
+      className="moviesGrid_wrapper_loading"
+    />
+    <div
+      className="moviesGrid_wrapper_loading"
+    />
+    <div
+      className="moviesGrid_wrapper_loading"
+    />
+  </div>
+  <div
+    className="moviesGrid_wrapper_loading_text"
+    id="loading_text"
+  >
+    <span
+      className="moviesGrid_wrapper_loading_text_span"
+    >
+      LOADING
+    </span>
+  </div>
+</div>
+`;
