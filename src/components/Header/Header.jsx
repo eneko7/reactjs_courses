@@ -8,11 +8,11 @@ import styles from './Header.scss';
 const Header = () => (
   <header className={styles.header}>
     <Logo />
-    <div className={styles.findYourMovie}>
-      <span className={styles.findYourMovie_span}>FIND YOUR MOVIE</span>
+    <div className={styles.header__find_your_movie}>
+      <span className={styles.header__find_your_movie_span}>FIND YOUR MOVIE</span>
     </div>
     <Search />
-    <div className={styles.header_searchControls}>
+    <div className={styles.header__search_controls}>
       <SearchBy />
       <Button text="SEARCH" />
     </div>

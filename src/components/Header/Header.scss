@@ -11,14 +11,14 @@
   padding: 1% 15%;
   min-height: 260px;
 
-  .findYourMovie {
+  .header__find_your_movie {
     margin-top: 4%;
     margin-bottom: 2%;
     display: block;
     position: relative;
     z-index: 3;
 
-    .findYourMovie_span {
+    .header__find_your_movie_span {
       font-family: $fontFamilyBold;
       color: #FFF;
       font-size: 25px;
@@ -37,20 +37,32 @@
   z-index: 2;
 }
 
-.header_searchControls {
+.header__search_controls {
   position: inherit;
   z-index: inherit;
   display: flex;
   justify-content: space-between;
 }
 
-@media (max-width: $mdSize) {
+@media (max-width: $fulhdDesktop) {
+  .header {
+    padding: 1% $leftPaddingLaptop;
+  }
+}
+
+@media (max-width: $laptop) {
+  .header {
+    padding: 1% $leftPaddingTablet;
+  }
+}
+
+@media (max-width: $tablet) {
   .header {
     padding: 1% 5%;
     height: 32vh;
   }
 
-  .header_searchControls {
+  .header__search_controls {
     display: block;
   }
 }

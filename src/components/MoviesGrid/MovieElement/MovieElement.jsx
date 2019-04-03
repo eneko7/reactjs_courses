@@ -21,9 +21,9 @@ class MovieElement extends Component {
       return null;
     }
     return (
-      <div className={styles.movieElement} onClick={this.openMovie} role="presentation">
+      <div className={styles.movie_element} onClick={this.openMovie} role="presentation">
         <ImagePoster src={data.poster_path} alt={data.title} />
-        <div className={styles.wrapperTitleYear}>
+        <div className={styles.wrapper_title_year}>
           <span className={styles.title}>{data.title}</span>
           <span className={styles.year}>
             {new Date(data.release_date).getFullYear()}

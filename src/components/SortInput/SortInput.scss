@@ -1,34 +1,41 @@
 @import "../../assets/constants/constants.scss";
 
-.sortBy_button {
+.sort_by_button {
   cursor: pointer;
   font-size: 18px;
   line-height: 25px;
   font-family: $fontFamilyBold;
 }
 
-.sortBy_input {
+.sort_by_input {
   display: none;
 }
 
-.sortBy_input:checked+.sortBy_button {
+.sort_by_input:checked+.sort_by_button {
   color: $roseColor;
 }
 
-.searchType_button {
+.search_type_button {
   cursor: pointer;
 	background-color: #343939;
 	color: #FFF;
 	border: none;
 	padding: 5px 30px;
-	font-size: 16px;
+  font-size: 16px;
+  text-transform: uppercase;
 	font-family: $fontFamilyBold;
 }
 
-.searchType_input {
+.search_type_input {
   display: none;
 }
 
-.searchType_input:checked+.searchType_button {
+.search_type_input:checked+.search_type_button {
   background-color: $roseColor;
+}
+
+@media (max-width: $smallPhone) {
+  .search_type_button {
+    padding: 5px 23px;
+  }
 }

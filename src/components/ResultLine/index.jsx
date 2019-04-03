@@ -1,1 +1,3 @@
-export { default } from './ResultLine';
+import ResultLine from './ResultLineContainer';
+
+export default ResultLine;

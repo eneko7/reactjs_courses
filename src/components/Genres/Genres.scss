@@ -4,6 +4,9 @@
   display: flex;
   justify-content: flex-start;
   padding: 0 10px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
 
   .genre {

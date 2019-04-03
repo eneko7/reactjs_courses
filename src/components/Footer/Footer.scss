@@ -8,7 +8,19 @@
   bottom: 0;
 }
 
-@media (max-width: $mdSize) {
+@media (max-width: $fulhdDesktop) {
+  .footer {
+    padding: 1% $leftPaddingLaptop;
+  }
+}
+
+@media (max-width: $laptop) {
+  .footer {
+    padding: 1% $leftPaddingTablet;
+  }
+}
+
+@media (max-width: $tablet) {
   .footer {
     padding: 1% 5%;
   }

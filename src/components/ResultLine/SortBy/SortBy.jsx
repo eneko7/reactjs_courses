@@ -3,22 +3,22 @@ import SortInput from '../../SortInput';
 import styles from './SortBy.scss';
 
 const SortBy = () => (
-  <div className={styles.sortBy}>
-    <span className={styles.sortBy_span}>Sort by</span>
+  <div className={styles.sort_by}>
+    <span className={styles.sort_by__span}>Sort by</span>
     <SortInput
       name="sortBy"
-      id="releaseDate"
+      id="release_date"
       text="Release date"
-      inputClass="sortBy_input"
-      labelClass="sortBy_button"
-      defaultChecked="defaultChecked"
+      inputClass="sort_by_input"
+      labelClass="sort_by_button"
+      defaultChecked
     />
     <SortInput
       name="sortBy"
-      id="Rating"
+      id="vote_average"
       text="Rating"
-      inputClass="sortBy_input"
-      labelClass="sortBy_button"
+      inputClass="sort_by_input"
+      labelClass="sort_by_button"
     />
   </div>
 );

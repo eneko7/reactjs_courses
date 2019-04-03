@@ -1,7 +1,26 @@
-.movieElementPoster {
+@import "../../../assets/constants/constants.scss";
+
+.movie_element_poster {
   width: 100%;
   height: 500px;
   object-fit: cover;
   margin-bottom: 20px
 }
 
+@media (max-width: $laptop) {
+  .movie_element_poster {
+    height: 400px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .movie_element_poster {
+    height: 260px;
+  }
+}
+
+@media (max-width: $phone) {
+  .movie_element_poster {
+    height: 350px;
+  }
+}

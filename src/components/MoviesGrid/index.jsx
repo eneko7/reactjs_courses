@@ -1,1 +1,3 @@
-export { default } from './MoviesGrid';
+import MoviesGrid from './MoviesGridContainer';
+
+export default MoviesGrid;

@@ -1,18 +1,37 @@
 @import "../../../assets/constants/constants.scss";
 
-.sortBy {
+.sort_by {
   display: flex;
   justify-content: space-between;
-  width: 20%;
+  width: 25%;
 }
 
-.sortBy_span {
+.sort_by__span {
   font-family: $fontFamilyBold;
   font-size: 20px;
 }
 
-@media (max-width: $mdSize) {
-  .sortBy {
-    width: 80%;
+@media (max-width: $desktop) {
+  .sort_by {
+    width: 30%;
+  }
+}
+
+@media (max-width: $laptop) {
+  .sort_by {
+    width: 40%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .sort_by {
+    width: 48%;
+  }
+}
+
+@media (max-width: $phone) {
+  .sort_by {
+    width: 90%;
+    margin-top: 15px;
   }
 }

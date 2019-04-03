@@ -14,9 +14,10 @@
 .header_button:focus {
 	outline: none;
 }
-@media (max-width: $mdSize) {
+@media (max-width: $tablet) {
   .header_button {
     margin: 15px auto;
-    display: block;
+		display: block;
+		padding: 7px 100px;
   }
 }

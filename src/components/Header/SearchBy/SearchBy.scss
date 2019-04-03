@@ -1,14 +1,14 @@
 @import "../../../assets/constants/constants.scss";
 
-.searchBy_wrapper {
+.search_by_wrapper {
   position: relative;
   z-index: inherit;
   margin-top: 30px;
-  width: 25%;
+  width: 30%;
   display: flex;
   justify-content: space-between;
 
-  .searchBy_title {
+  .search_by_title {
     color: #FFF;
     font-family: $fontFamilyBold;
     font-size: 15px;
@@ -16,8 +16,32 @@
   }
 }
 
-@media (max-width: $mdSize) {
-  .searchBy_wrapper {
+@media (max-width: $desktop) {
+  .search_by_wrapper {
+    width: 40%;
+  }
+}
+
+@media (max-width: $laptop) {
+  .search_by_wrapper {
+    width: 37%;
+  }
+}
+
+@media (max-width: $largeTablet) {
+  .search_by_wrapper {
+    width: 45%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .search_by_wrapper {
+    width: 65%;
+  }
+}
+
+@media (max-width: $phone) {
+  .search_by_wrapper {
     width: 100%;
   }
 }
