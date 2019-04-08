@@ -3,7 +3,7 @@
 exports[`ImagePoster renders correctly 1`] = `
 <img
   alt="test"
-  className="movieElementPoster"
+  className="movie_element_poster"
   src="test"
 />
 `;

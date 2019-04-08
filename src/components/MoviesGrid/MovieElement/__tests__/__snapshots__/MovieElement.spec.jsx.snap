@@ -4,7 +4,7 @@ exports[`MovieElement MovieElement -> Click on Movie card (open) 1`] = `ReactWra
 
 exports[`MovieElement renders correctly 1`] = `
 <div
-  className="movieElement"
+  className="movie_element"
   onClick={[Function]}
   role="presentation"
 >
@@ -13,7 +13,7 @@ exports[`MovieElement renders correctly 1`] = `
     src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
   />
   <div
-    className="wrapperTitleYear"
+    className="wrapper_title_year"
   >
     <span
       className="title"

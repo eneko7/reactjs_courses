@@ -1,23 +1,25 @@
 @import "../../assets/constants/constants.scss";
 
 .header_button {
-	cursor: pointer;
-	color: #FFF;
-	border: none;
-	background-color: $roseColor;
-	padding: 5px 100px;
-	margin-top: 15px;
-	font-size: 16px;
-	font-family: $fontFamilyBold;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background-color: $roseColor;
+  padding: 5px 100px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: $fontFamilyBold;
+  text-transform: uppercase;
 }
 
 .header_button:focus {
-	outline: none;
+  outline: none;
 }
+
 @media (max-width: $tablet) {
   .header_button {
     margin: 15px auto;
-		display: block;
-		padding: 7px 100px;
+    display: block;
+    padding: 7px 100px;
   }
 }

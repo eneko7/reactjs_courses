@@ -1,19 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SortInput renders correctly 1`] = `
-<React.Fragment>
+exports[`MoviesGrid change radio correctly 1`] = `
+Array [
   <input
     className="inputClass"
-    defaultChecked="defaultChecked"
+    defaultChecked={true}
     id="id"
     name="name"
+    onChange={[Function]}
     type="radio"
-  />
+    value="id"
+  />,
   <label
     className="labelClass"
     htmlFor="id"
   >
     text
-  </label>
-</React.Fragment>
+  </label>,
+]
+`;
+
+exports[`MoviesGrid change radio correctly 2`] = `
+Array [
+  <input
+    className="inputClass"
+    defaultChecked={true}
+    id="id"
+    name="name"
+    onChange={[Function]}
+    type="radio"
+    value="id"
+  />,
+  <label
+    className="labelClass"
+    htmlFor="id"
+  >
+    text
+  </label>,
+]
+`;
+
+exports[`MoviesGrid renders correctly 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeState": Object {
+        "searchBy": "title",
+        "searchRequest": "test",
+        "sortBy": "release_date",
+      },
+    }
+  }
+>
+  <SortInput
+    defaultChecked={true}
+    fetchSearchMovies={[Function]}
+    id="id"
+    inputClass="inputClass"
+    labelClass="labelClass"
+    name="name"
+    searchBy="title"
+    searchRequest="test"
+    sortBy="release_date"
+    text="text"
+    updateFilterSearch={[Function]}
+    updateFilterSort={[Function]}
+    updateSearchRequest={[Function]}
+  />
+</Context.Provider>
 `;

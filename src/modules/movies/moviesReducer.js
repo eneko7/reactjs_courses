@@ -27,10 +27,7 @@ const moviesReducer = (state = initialState, action) => {
           ? action.payload.movies
           : state.allMovies.concat(action.payload.movies),
         url: action.payload.url,
-        offset: action.payload.offset,
-        quantity: action.payload.quantity,
-        searchBy: action.payload.searchBy,
-        sortBy: action.payload.sortBy,
+        ...action.payload,
         errorMovies: '',
       };
     case DATA_REQUEST:

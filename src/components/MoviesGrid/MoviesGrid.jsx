@@ -24,16 +24,13 @@ class MoviesGrid extends Component {
   }
 
   render() {
-    const { movies, errorSearch, isFetchingMovies } = this.props;
-    if (errorSearch) {
+    const { movies, isFetchingMovies } = this.props;
+    if (!movies.length) {
       return (
         <article className={styles.movies_grid}>
           <span className={styles.movies_grid__not_found}>No films found</span>
         </article>
       );
-    }
-    if (!movies.length) {
-      return <Loading />;
     }
     const data = movies.map(item => <MovieElement data={item} key={item.id} />);
     return (
@@ -51,7 +48,6 @@ MoviesGrid.propTypes = {
   fetchDefaultMovies: propTypes.func.isRequired,
   fetchNextMovies: propTypes.func.isRequired,
   isFetchingMovies: propTypes.bool.isRequired,
-  errorSearch: propTypes.bool.isRequired,
   movies: propTypes.arrayOf(propTypes.object).isRequired,
 };
 

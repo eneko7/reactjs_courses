@@ -1,423 +1,363 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`MoviesGrid function for fetch next films should be called after scrolling 1`] = `
+<article
+  className="movies_grid"
+>
+  <div
+    className="movie_element"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <img
+      alt="Mobile Homes"
+      className="movie_element_poster"
+      src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
+    />
+    <div
+      className="wrapper_title_year"
+    >
+      <span
+        className="title"
+      >
+        Mobile Homes
+      </span>
+      <span
+        className="year"
+      >
+        2018
+      </span>
+    </div>
+    <div
+      className="genres"
+    >
+      <span
+        className="genre"
+      >
+        Drama
+      </span>
+    </div>
+  </div>
+  <div
+    className="movie_element"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <img
+      alt="Mademoiselle Paradis"
+      className="movie_element_poster"
+      src="https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg"
+    />
+    <div
+      className="wrapper_title_year"
+    >
+      <span
+        className="title"
+      >
+        Mademoiselle Paradis
+      </span>
+      <span
+        className="year"
+      >
+        2018
+      </span>
+    </div>
+    <div
+      className="genres"
+    >
+      <span
+        className="genre"
+      >
+        History
+      </span>
+      <span
+        className="genre"
+      >
+        Drama
+      </span>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`MoviesGrid function for fetch next films should be called after scrolling 2`] = `
+<article
+  className="movies_grid"
+>
+  <div
+    className="movie_element"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <img
+      alt="Mobile Homes"
+      className="movie_element_poster"
+      src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
+    />
+    <div
+      className="wrapper_title_year"
+    >
+      <span
+        className="title"
+      >
+        Mobile Homes
+      </span>
+      <span
+        className="year"
+      >
+        2018
+      </span>
+    </div>
+    <div
+      className="genres"
+    >
+      <span
+        className="genre"
+      >
+        Drama
+      </span>
+    </div>
+  </div>
+  <div
+    className="movie_element"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <img
+      alt="Mademoiselle Paradis"
+      className="movie_element_poster"
+      src="https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg"
+    />
+    <div
+      className="wrapper_title_year"
+    >
+      <span
+        className="title"
+      >
+        Mademoiselle Paradis
+      </span>
+      <span
+        className="year"
+      >
+        2018
+      </span>
+    </div>
+    <div
+      className="genres"
+    >
+      <span
+        className="genre"
+      >
+        History
+      </span>
+      <span
+        className="genre"
+      >
+        Drama
+      </span>
+    </div>
+  </div>
+</article>
+`;
+
 exports[`MoviesGrid renders correctly 1`] = `
 <article
-  className="MoviesGrid"
+  className="movies_grid"
 >
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Drama",
-        ],
-        "id": 412059,
-        "overview": "In forgotten towns along the American border, a young mother drifts from one motel to the next with her intoxicating boyfriend and her 8-year-old son. The makeshift family scrapes by, living one hustle at a time, until the discovery of a mobile home community offers an alternative life.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg",
-        "release_date": "2018-04-04",
-        "revenue": 0,
-        "runtime": 105,
-        "tagline": "",
-        "title": "Mobile Homes",
-        "vote_average": 0,
-        "vote_count": 1,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "History",
-          "Drama",
-        ],
-        "id": 424585,
-        "overview": "18th century Vienna. The true story of Maria Theresia von Paradis, a gifted piano player and close friend of Mozart’s, who lost her eye-sight as a child. Desperate to cure their talented daughter, the Paradis entrust Maria to Dr. Mesmer, a forward-thinking-physician who gives her the care and attention that she requires. With the doctor’s innovative techniques of magnetism, Maria slowly recovers her sight. But this miracle comes at a price as the woman progressively starts to lose her gift for music. Faced with a heavy dilemma, Mademoiselle Paradis will have to choose: an ordinary life in the light or an extraordinary life in darkness, as a virtuoso.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg",
-        "release_date": "2018-04-04",
-        "revenue": 0,
-        "runtime": 97,
-        "tagline": "",
-        "title": "Mademoiselle Paradis",
-        "vote_average": 6,
-        "vote_count": 2,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Comedy",
-          "Drama",
-        ],
-        "id": 443009,
-        "overview": "A man becomes paralyzed after a car accident and discovers drawing as a therapy.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/y6E5tgqdhvW3mr3dGo8NenWHRCg.jpg",
-        "release_date": "2018-04-04",
-        "revenue": 0,
-        "runtime": 113,
-        "tagline": "",
-        "title": "Don’t Worry, He Won’t Get Far on Foot",
-        "vote_average": 0,
-        "vote_count": 1,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Drama",
-          "Mystery",
-          "Fantasy",
-          "History",
-        ],
-        "id": 509885,
-        "overview": "",
-        "poster_path": "https://image.tmdb.org/t/p/w500/ns3l4pPOORrlSgdCLSEXJDn8hvB.jpg",
-        "release_date": "2018-04-03",
-        "revenue": 0,
-        "runtime": null,
-        "tagline": "",
-        "title": "Le Portrait",
-        "vote_average": 0,
-        "vote_count": 0,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [],
-        "id": 499953,
-        "overview": "A young man uses a bug camera to spy on his ex-girlfriend, then witnesses her abduction.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/qPtQPxj7xEfa5PpZxti05PCchO5.jpg",
-        "release_date": "2018-04-03",
-        "revenue": 0,
-        "runtime": 89,
-        "tagline": "Always Be Watching",
-        "title": "Fly on the Wall",
-        "vote_average": 0,
-        "vote_count": 0,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Mystery",
-          "Drama",
-          "Music",
-        ],
-        "id": 498299,
-        "overview": "As Christine tries to find a relief after her brother's death, she meets Alonzo at the neighborhood basketball court. After finding out that he lost his father 2 years prior, they became close, and felt that if they stuck together, it would be easier to cope. Now Christine is trying to find a way to encounter her brother's soul as her relationship with Alonzo develops.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/luz35TmazOgRbJboWt24owoB5Eg.jpg",
-        "release_date": "2018-04-03",
-        "revenue": 0,
-        "runtime": null,
-        "tagline": "when physical appearance is the least what you need",
-        "title": "Can I Recognize Your Soul",
-        "vote_average": 0,
-        "vote_count": 0,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 200000,
-        "genres": Array [
-          "Thriller",
-          "Mystery",
-          "Adventure",
-          "Crime",
-          "Romance",
-        ],
-        "id": 513285,
-        "overview": "Private eye Roland Drake cracks cases and romances femme fatales in 1940's Los Angeles while corrupt cop Det Barry Tate rules the city. A tale told in the classic style of film noir. Drake has fallen on hard times in a harsh world. He has been evicted from his office and disgraced by a missing persons case. Ruined in the public eye and with the police. it seems like it's all over for Roland Drake. Then, redemption walks in - with curves. The owner of those curves is a sexy, dark haired beauty named Katherine Montemar. She wants his help. The chemistry is immediate and her concern for the disappearance of her family members pulls him into her case - and into bed.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/4dw0z5Uh2NbabdGk2u6wdyJvMg7.jpg",
-        "release_date": "2018-04-03",
-        "revenue": 0,
-        "runtime": 116,
-        "tagline": "Passion, Murder, and Betrayal. Just Another Day at the Office.",
-        "title": "Trouble Is My Business",
-        "vote_average": 0,
-        "vote_count": 0,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Documentary",
-        ],
-        "id": 512686,
-        "overview": "An documentary on the freedom of art in the Netherlands by Gerard Reves. Reve sets out to defend the freedom of art against angry constituents.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/u77tpnVFhgjxS1hQRawZQ6EckBS.jpg",
-        "release_date": "2018-04-02",
-        "revenue": 0,
-        "runtime": null,
-        "tagline": "",
-        "title": "Het is gezien",
-        "vote_average": 0,
-        "vote_count": 0,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Music",
-        ],
-        "id": 511115,
-        "overview": "Captured at their sold-out engagement and first performance at the Royal Albert Hall. In two parts, All One Tonight firstly showcases the band’s acclaimed 2016 studio album F E A R in full. Accompanied by an awe-inspiring light show and films, Marillion perform their incisive and era-defining zeitgeist with unparalleled passion and power. The second half introduces In Praise Of Folly and guests, a string quartet with flute and French horn that throughout the rest of the show inject an extra depth and emotion to some of Marillion’s best-loved live material.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/wSqwIZM40N3trdESVJkntCiOUao.jpg",
-        "release_date": "2018-04-02",
-        "revenue": 0,
-        "runtime": null,
-        "tagline": "",
-        "title": "Marillion: All One Tonight - Live At The Royal Albert Hall",
-        "vote_average": 0,
-        "vote_count": 0,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Documentary",
-        ],
-        "id": 485548,
-        "overview": "In the 1990s, alt-rock band Luxury is skyrocketing toward national fame until a life-threatening tour bus wreck shakes each band member to his core. Today, Luxury is led by three orthodox priests--and they're still rocking.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/qCvae8HztqvWANAD5UOs9GBWPxG.jpg",
-        "release_date": "2018-04-01",
-        "revenue": 0,
-        "runtime": null,
-        "tagline": "",
-        "title": "Parallel Love: The Story of a Band Called Luxury",
-        "vote_average": 0,
-        "vote_count": 0,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Drama",
-          "Romance",
-        ],
-        "id": 513296,
-        "overview": "When an ambitious event planner gets an opportunity she can’t refuse, she goes undercover as her boss and returns to her rural hometown. With the help of her family and the man she left behind, she pulls off the perfect spring retreat, but will she discover home is where her heart is?",
-        "poster_path": "https://image.tmdb.org/t/p/w500/ZB37DKQYY2CZggITv66RZ9DfqM.jpg",
-        "release_date": "2018-03-31",
-        "revenue": 0,
-        "runtime": 90,
-        "tagline": "",
-        "title": "Home by Spring",
-        "vote_average": 6,
-        "vote_count": 1,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Comedy",
-          "Drama",
-          "Thriller",
-        ],
-        "id": 421044,
-        "overview": "When a drifter befriends a quirky mortician, an unlikely business partnership is formed. Paranoia soon develops, however, and both men are forced to come to terms with the fragility of friendship and loyalty.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/5Knp0sBWb4hLTc49qaiDjZ4DYV8.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 108,
-        "tagline": "Friendship before money",
-        "title": "Best F(r)iends",
-        "vote_average": 3.3,
-        "vote_count": 9,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Comedy",
-        ],
-        "id": 437557,
-        "overview": "When three parents discover their daughters’ pact to lose their virginity at prom, they launch a covert one-night operation to stop the teens from sealing the deal.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/9qKMYfiJTcUQbuBl82yxrmLSCX5.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 102,
-        "tagline": "Teens out to have fun. Parents out to stop it.",
-        "title": "Blockers",
-        "vote_average": 5.8,
-        "vote_count": 13,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Science Fiction",
-        ],
-        "id": 476926,
-        "overview": "Hotshot Air Force pilot, Rick Janssen is chosen for a military experiment that will create a human being capable of surviving the harsh environments of one of Saturn's moons, Titan. The experiment is successful, turning Rick into a super-human, but it also creates deadly side-effects which threatens the life of Rick, his wife and his family – and possibly humanity itself.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/FBfA7V41ezvP1UTx9BTUS2BLsq.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 97,
-        "tagline": "",
-        "title": "The Titan",
-        "vote_average": 5.8,
-        "vote_count": 93,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Drama",
-        ],
-        "id": 472805,
-        "overview": "An ex-con struggling to readjust to life in his small town forms an intense bond with his former high-school teacher.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/o8mGEiiEmR7yyoDqk9iSAeokYVZ.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 109,
-        "tagline": "Things are never the same on the outside.",
-        "title": "Outside In",
-        "vote_average": 0,
-        "vote_count": 2,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Mystery",
-          "Thriller",
-        ],
-        "id": 412302,
-        "overview": "A heinous crime tests the complex relationship between a tenacious personal assistant and her Hollywood starlet boss. As the assistant travels across Los Angeles to unravel the mystery, she must stay one step ahead of a determined policeman and confront her own understanding of friendship, truth and celebrity.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/oIltQs7MPk7VQFG3DJfgC63mShU.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 92,
-        "tagline": "",
-        "title": "Gemini",
-        "vote_average": 10,
-        "vote_count": 3,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Documentary",
-        ],
-        "id": 474753,
-        "overview": "An unsettling and eye-opening Wall Street horror story about Chinese companies, the American stock market, and the opportunistic greed behind the biggest heist you've never heard of.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/3k6a2ZshjaFdN23bUm3kRdxr5Ny.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 82,
-        "tagline": "There are no good guys in this story.",
-        "title": "The China Hustle",
-        "vote_average": 6.5,
-        "vote_count": 5,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Drama",
-        ],
-        "id": 426251,
-        "overview": "A sixty-something mother and her two adult sons cope and move onward following the death of their larger-than-life father/husband.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/rvPAfO18Kk4C9jcOvlJao70jSCj.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 93,
-        "tagline": "",
-        "title": "Love After Love",
-        "vote_average": 0,
-        "vote_count": 1,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Action",
-          "Romance",
-          "Thriller",
-        ],
-        "id": 496316,
-        "overview": "A battle-hardened army officer goes in search of his ex-lover's child who is mysteriously kidnapped. Neha reaches out to the only person who can help her with her plight, Ronnie. He goes deep into the underbelly of Goa, facing off against drug lords, menacing Russian henchmen, and blood thirsty animals. Daring stunts, chase sequences, air strikes, bomb blasts and other large-scale action sequences will be done with a bona-fide, larger than life approach, truly making it a spectacle.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/gwX6mKjfxBYbq46CoIpcxIAmIMx.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 145,
-        "tagline": "Rebel for Love",
-        "title": "Baaghi 2",
-        "vote_average": 7.7,
-        "vote_count": 3,
-      }
-    }
-  />
-  <MovieElement
-    data={
-      Object {
-        "budget": 0,
-        "genres": Array [
-          "Drama",
-        ],
-        "id": 464502,
-        "overview": "A faithful wife takes action when it becomes clear to her that her devious husband has betrayed her.",
-        "poster_path": "https://image.tmdb.org/t/p/w500/9QA8rjbMqPcJXdHWEZE4Nxvktgx.jpg",
-        "release_date": "2018-03-30",
-        "revenue": 0,
-        "runtime": 120,
-        "tagline": "You always hurt the ones you love.",
-        "title": "Acrimony",
-        "vote_average": 8.1,
-        "vote_count": 10,
-      }
-    }
-  />
+  <div
+    className="movie_element"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <img
+      alt="Mobile Homes"
+      className="movie_element_poster"
+      src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
+    />
+    <div
+      className="wrapper_title_year"
+    >
+      <span
+        className="title"
+      >
+        Mobile Homes
+      </span>
+      <span
+        className="year"
+      >
+        2018
+      </span>
+    </div>
+    <div
+      className="genres"
+    >
+      <span
+        className="genre"
+      >
+        Drama
+      </span>
+    </div>
+  </div>
+  <div
+    className="movie_element"
+    onClick={[Function]}
+    role="presentation"
+  >
+    <img
+      alt="Mademoiselle Paradis"
+      className="movie_element_poster"
+      src="https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg"
+    />
+    <div
+      className="wrapper_title_year"
+    >
+      <span
+        className="title"
+      >
+        Mademoiselle Paradis
+      </span>
+      <span
+        className="year"
+      >
+        2018
+      </span>
+    </div>
+    <div
+      className="genres"
+    >
+      <span
+        className="genre"
+      >
+        History
+      </span>
+      <span
+        className="genre"
+      >
+        Drama
+      </span>
+    </div>
+  </div>
+</article>
+`;
+
+exports[`MoviesGrid renders correctly 2`] = `
+Array [
+  <article
+    className="movies_grid"
+  >
+    <div
+      className="movie_element"
+      onClick={[Function]}
+      role="presentation"
+    >
+      <img
+        alt="Mobile Homes"
+        className="movie_element_poster"
+        src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
+      />
+      <div
+        className="wrapper_title_year"
+      >
+        <span
+          className="title"
+        >
+          Mobile Homes
+        </span>
+        <span
+          className="year"
+        >
+          2018
+        </span>
+      </div>
+      <div
+        className="genres"
+      >
+        <span
+          className="genre"
+        >
+          Drama
+        </span>
+      </div>
+    </div>
+    <div
+      className="movie_element"
+      onClick={[Function]}
+      role="presentation"
+    >
+      <img
+        alt="Mademoiselle Paradis"
+        className="movie_element_poster"
+        src="https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg"
+      />
+      <div
+        className="wrapper_title_year"
+      >
+        <span
+          className="title"
+        >
+          Mademoiselle Paradis
+        </span>
+        <span
+          className="year"
+        >
+          2018
+        </span>
+      </div>
+      <div
+        className="genres"
+      >
+        <span
+          className="genre"
+        >
+          History
+        </span>
+        <span
+          className="genre"
+        >
+          Drama
+        </span>
+      </div>
+    </div>
+  </article>,
+  <div
+    className="loading"
+  >
+    <div
+      className="movies_grid_wrapper_loading"
+      id="loading"
+    >
+      <div
+        className="movies_grid_wrapper_loading"
+      />
+      <div
+        className="movies_grid_wrapper_loading"
+      />
+      <div
+        className="movies_grid_wrapper_loading"
+      />
+    </div>
+    <div
+      className="movies_grid_wrapper_loading_text"
+      id="loading_text"
+    >
+      <span
+        className="movies_grid_wrapper_loading_text_span"
+      >
+        LOADING
+      </span>
+    </div>
+  </div>,
+]
+`;
+
+exports[`MoviesGrid renders correctly 3`] = `
+<article
+  className="movies_grid"
+>
+  <span
+    className="movies_grid__not_found"
+  >
+    No films found
+  </span>
 </article>
 `;

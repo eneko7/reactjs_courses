@@ -1,27 +1,98 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header renders correctly 1`] = `
+exports[`Header click render 1`] = `
 <header
   className="header"
 >
-  <Logo />
+  <span
+    className="logo"
+  >
+    NetflixRoulette
+  </span>
   <div
-    className="findYourMovie"
+    className="header__find_your_movie"
   >
     <span
-      className="findYourMovie_span"
+      className="header__find_your_movie_span"
     >
       FIND YOUR MOVIE
     </span>
   </div>
-  <Search />
-  <div
-    className="header_searchControls"
+  <form
+    onSubmit={[Function]}
   >
-    <SearchBy />
-    <Button
-      text="SEARCH"
+    <input
+      className="search_input"
+      name="search"
+      onChange={[Function]}
+      placeholder="Enter movie title"
+      type="text"
+      value=""
     />
+    <span
+      className="search_icon"
+      onClick={[Function]}
+      role="presentation"
+    >
+      ↩
+    </span>
+  </form>
+  <div
+    className="header__search_controls"
+  >
+    <div
+      className="search_by_wrapper"
+    >
+      <span
+        className="search_by_title"
+      >
+        SEARCH BY
+      </span>
+      <div>
+        test
+      </div>
+      <div>
+        test
+      </div>
+    </div>
+    <button
+      className="header_button"
+      onClick={[Function]}
+      type="button"
+    >
+      search
+    </button>
   </div>
 </header>
+`;
+
+exports[`Header renders correctly 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeState": Object {
+        "filter": Object {
+          "searchBy": "title",
+          "sortBy": "release_date",
+        },
+        "searchRequest": "test",
+      },
+    }
+  }
+>
+  <Header
+    fetchSearchMovies={[Function]}
+    searchBy="title"
+    searchRequest="test"
+    sortBy="release_date"
+  />
+</Context.Provider>
 `;

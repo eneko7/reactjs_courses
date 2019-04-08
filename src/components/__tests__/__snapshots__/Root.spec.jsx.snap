@@ -5,9 +5,9 @@ exports[`Root renders correctly 1`] = `
   className="main"
 >
   <ErrorBoundary>
-    <Header />
-    <ResultLine />
-    <MoviesGrid />
+    <Connect(Header) />
+    <Connect(ResultLine) />
+    <Connect(MoviesGrid) />
     <Footer />
   </ErrorBoundary>
 </main>

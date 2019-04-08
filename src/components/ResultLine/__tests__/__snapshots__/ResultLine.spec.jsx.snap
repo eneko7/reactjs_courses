@@ -2,12 +2,12 @@
 
 exports[`ResultLine renders correctly 1`] = `
 <div
-  className="resultLine"
+  className="result_line"
 >
   <span
-    className="countFoundFilms"
+    className="result_line__count_founded_films"
   >
-    7 movies found
+    1 movies found
   </span>
   <SortBy />
 </div>

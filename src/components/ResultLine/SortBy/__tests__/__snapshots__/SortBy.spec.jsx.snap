@@ -2,26 +2,25 @@
 
 exports[`SortBy renders correctly 1`] = `
 <div
-  className="sortBy"
+  className="sort_by"
 >
   <span
-    className="sortBy_span"
+    className="sort_by__span"
   >
     Sort by
   </span>
-  <SortInput
-    defaultChecked="defaultChecked"
-    id="releaseDate"
-    inputClass="sortBy_input"
-    labelClass="sortBy_button"
+  <Connect(SortInput)
+    defaultChecked={true}
+    id="release_date"
+    inputClass="sort_by_input"
+    labelClass="sort_by_button"
     name="sortBy"
     text="Release date"
   />
-  <SortInput
-    defaultChecked=""
-    id="Rating"
-    inputClass="sortBy_input"
-    labelClass="sortBy_button"
+  <Connect(SortInput)
+    id="vote_average"
+    inputClass="sort_by_input"
+    labelClass="sort_by_button"
     name="sortBy"
     text="Rating"
   />

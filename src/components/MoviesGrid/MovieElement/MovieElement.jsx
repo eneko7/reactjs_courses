@@ -35,6 +35,10 @@ class MovieElement extends Component {
   }
 }
 
+MovieElement.defaultProps = {
+  data: null,
+};
+
 MovieElement.propTypes = {
   data: propTypes.objectOf(
     propTypes.oneOfType([
@@ -43,7 +47,7 @@ MovieElement.propTypes = {
       propTypes.array,
       propTypes.bool,
     ]),
-  ).isRequired,
+  ),
 };
 
 export default MovieElement;

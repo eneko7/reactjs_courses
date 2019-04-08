@@ -11,7 +11,7 @@ class SortInput extends Component {
     if (name === 'searchBy') {
       updateFilterSearch(value);
       updateSearchRequest('');
-    } else if (name === 'sortBy') {
+    } else {
       const { searchBy, searchRequest } = this.props;
       updateFilterSort(searchRequest, searchBy, value);
     }

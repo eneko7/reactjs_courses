@@ -11,26 +11,26 @@
   display: none;
 }
 
-.sort_by_input:checked+.sort_by_button {
+.sort_by_input:checked + .sort_by_button {
   color: $roseColor;
 }
 
 .search_type_button {
   cursor: pointer;
-	background-color: #343939;
-	color: #FFF;
-	border: none;
-	padding: 5px 30px;
+  background-color: #343939;
+  color: #fff;
+  border: none;
+  padding: 5px 30px;
   font-size: 16px;
   text-transform: uppercase;
-	font-family: $fontFamilyBold;
+  font-family: $fontFamilyBold;
 }
 
 .search_type_input {
   display: none;
 }
 
-.search_type_input:checked+.search_type_button {
+.search_type_input:checked + .search_type_button {
   background-color: $roseColor;
 }
 
