@@ -2,28 +2,27 @@
 
 exports[`SearchBy renders correctly 1`] = `
 <div
-  className="searchBy_wrapper"
+  className="search_by_wrapper"
 >
   <span
-    className="searchBy_title"
+    className="search_by_title"
   >
     SEARCH BY
   </span>
-  <SortInput
-    defaultChecked="defaultChecked"
-    id="TITLE"
-    inputClass="searchType_input"
-    labelClass="searchType_button"
+  <Connect(SortInput)
+    defaultChecked={true}
+    id="title"
+    inputClass="search_type_input"
+    labelClass="search_type_button"
     name="searchBy"
-    text="TITLE"
+    text="title"
   />
-  <SortInput
-    defaultChecked=""
-    id="GENRE"
-    inputClass="searchType_input"
-    labelClass="searchType_button"
+  <Connect(SortInput)
+    id="genres"
+    inputClass="search_type_input"
+    labelClass="search_type_button"
     name="searchBy"
-    text="GENRE"
+    text="genre"
   />
 </div>
 `;

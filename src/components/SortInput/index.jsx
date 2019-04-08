@@ -1,1 +1,3 @@
-export { default } from './SortInput';
+import SortInput from './SortInputContainer';
+
+export default SortInput;

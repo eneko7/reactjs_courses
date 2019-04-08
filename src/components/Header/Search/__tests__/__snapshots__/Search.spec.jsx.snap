@@ -1,17 +1,97 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search renders correctly 1`] = `
-<React.Fragment>
+exports[`Search render change input value correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
   <input
     className="search_input"
     name="search"
-    placeholder="Film name"
+    onChange={[Function]}
+    placeholder="Enter movie title"
     type="text"
+    value="test"
   />
   <span
     className="search_icon"
+    onClick={[Function]}
+    role="presentation"
   >
     ↩
   </span>
-</React.Fragment>
+</form>
+`;
+
+exports[`Search render click on icon correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    className="search_input"
+    name="search"
+    onChange={[Function]}
+    placeholder="Enter movie title"
+    type="text"
+    value="test"
+  />
+  <span
+    className="search_icon"
+    onClick={[Function]}
+    role="presentation"
+  >
+    ↩
+  </span>
+</form>
+`;
+
+exports[`Search render renders with genres correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    className="search_input"
+    name="search"
+    onChange={[Function]}
+    placeholder="Enter genres name, for example: action, family, adventure"
+    type="text"
+    value="test"
+  />
+  <span
+    className="search_icon"
+    onClick={[Function]}
+    role="presentation"
+  >
+    ↩
+  </span>
+</form>
+`;
+
+exports[`Search render renders with title correctly 1`] = `
+<Context.Provider
+  value={
+    Object {
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeState": Object {
+        "searchBy": "title",
+        "searchRequest": "test",
+        "sortBy": "release_date",
+      },
+    }
+  }
+>
+  <Search
+    fetchSearchMovies={[Function]}
+    searchBy="title"
+    searchRequest="test"
+    sortBy="release_date"
+    updateSearchRequest={[Function]}
+  />
+</Context.Provider>
 `;

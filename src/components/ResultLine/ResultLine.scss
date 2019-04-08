@@ -1,24 +1,36 @@
 @import "../../assets/constants/constants.scss";
 
-.resultLine {
+.result_line {
   padding: 1% 15%;
   background-color: #f2f2f2;
   display: flex;
   justify-content: space-between;
 
-  .countFoundFilms {
+  .result_line__count_founded_films {
     font-family: $fontFamilyBold;
     font-size: 20px;
   }
 }
 
-@media (max-width: $mdSize) {
-  .resultLine {
+@media (max-width: $fulhdDesktop) {
+  .result_line {
+    padding: 1% $leftPaddingLaptop;
+  }
+}
+
+@media (max-width: $laptop) {
+  .result_line {
+    padding: 1% $leftPaddingTablet;
+  }
+}
+
+@media (max-width: $tablet) {
+  .result_line {
     padding: 1% 5%;
     display: block;
     text-align: right;
 
-    .countFoundFilms {
+    .result_line__count_founded_films {
       font-size: 18px;
     }
   }

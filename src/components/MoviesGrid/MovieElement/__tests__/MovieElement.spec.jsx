@@ -45,15 +45,7 @@ describe('MovieElement', () => {
     const wrapper = mount((
       <MovieElement data={data} />
     ));
-    const element = wrapper.find('.movieElement').simulate('click');
+    const element = wrapper.find('.movie_element').simulate('click');
     expect(element).toMatchSnapshot();
   });
-
-  // it('MovieElement -> Click on Movie card (close)', () => {
-  //   const wrapper = mount((
-  //     <MovieElement data={data} />
-  //   ));
-  //   const element = wrapper.find('.movieElement').simulate('click');
-  //   expect(element).toMatchSnapshot();
-  // });
 });

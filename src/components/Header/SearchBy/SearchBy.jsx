@@ -3,22 +3,22 @@ import SortInput from '../../SortInput';
 import styles from './SearchBy.scss';
 
 const SearchBy = () => (
-  <div className={styles.searchBy_wrapper}>
-    <span className={styles.searchBy_title}>SEARCH BY</span>
+  <div className={styles.search_by_wrapper}>
+    <span className={styles.search_by_title}>SEARCH BY</span>
     <SortInput
       name="searchBy"
-      id="TITLE"
-      text="TITLE"
-      inputClass="searchType_input"
-      labelClass="searchType_button"
-      defaultChecked="defaultChecked"
+      id="title"
+      text="title"
+      inputClass="search_type_input"
+      labelClass="search_type_button"
+      defaultChecked
     />
     <SortInput
       name="searchBy"
-      id="GENRE"
-      text="GENRE"
-      inputClass="searchType_input"
-      labelClass="searchType_button"
+      id="genres"
+      text="genre"
+      inputClass="search_type_input"
+      labelClass="search_type_button"
     />
   </div>
 );

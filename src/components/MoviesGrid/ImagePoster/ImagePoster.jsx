@@ -6,12 +6,17 @@ const ImagePoster = ({
   src,
   alt,
 }) => (
-  <img src={src} alt={alt} className={styles.movieElementPoster} />
+  <img src={src} alt={alt} className={styles.movie_element_poster} />
 );
 
+ImagePoster.defaultProps = {
+  src: '',
+  alt: '',
+};
+
 ImagePoster.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+  src: PropTypes.string,
+  alt: PropTypes.string,
 };
 
 export default ImagePoster;

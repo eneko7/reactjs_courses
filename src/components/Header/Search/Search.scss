@@ -18,12 +18,12 @@
 }
 
 .search_input::placeholder {
-  color: #FFF;
+  color: #fff;
   opacity: 0.8;
 }
 
 .search_icon {
-  color: #FFF;
+  color: #fff;
   position: absolute;
   z-index: 3;
   right: 15%;
@@ -33,7 +33,19 @@
   cursor: pointer;
 }
 
-@media (max-width: $mdSize) {
+@media (max-width: $fulhdDesktop) {
+  .search_icon {
+    right: $leftPaddingLaptop;
+  }
+}
+
+@media (max-width: $laptop) {
+  .search_icon {
+    right: $leftPaddingTablet;
+  }
+}
+
+@media (max-width: $tablet) {
   .search_input {
     font-size: 16px;
   }

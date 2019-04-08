@@ -5,25 +5,25 @@ exports[`Loading renders correctly 1`] = `
   className="loading"
 >
   <div
-    className="moviesGrid_wrapper_loading"
+    className="movies_grid_wrapper_loading"
     id="loading"
   >
     <div
-      className="moviesGrid_wrapper_loading"
+      className="movies_grid_wrapper_loading"
     />
     <div
-      className="moviesGrid_wrapper_loading"
+      className="movies_grid_wrapper_loading"
     />
     <div
-      className="moviesGrid_wrapper_loading"
+      className="movies_grid_wrapper_loading"
     />
   </div>
   <div
-    className="moviesGrid_wrapper_loading_text"
+    className="movies_grid_wrapper_loading_text"
     id="loading_text"
   >
     <span
-      className="moviesGrid_wrapper_loading_text_span"
+      className="movies_grid_wrapper_loading_text_span"
     >
       LOADING
     </span>

@@ -1,37 +1,37 @@
-/// <reference types="Cypress" />
+// / <reference types="Cypress" />
 
 context('Utilities', () => {
   beforeEach(() => {
-    cy.visit('https://example.cypress.io/utilities')
-  })
+    cy.visit('https://example.cypress.io/utilities');
+  });
 
   it('Cypress._ - call a lodash method', () => {
     // https://on.cypress.io/_
     cy.request('https://jsonplaceholder.cypress.io/users')
       .then((response) => {
-        let ids = Cypress._.chain(response.body).map('id').take(3).value()
+        const ids = Cypress._.chain(response.body).map('id').take(3).value();
 
-        expect(ids).to.deep.eq([1, 2, 3])
-      })
-  })
+        expect(ids).to.deep.eq([1, 2, 3]);
+      });
+  });
 
   it('Cypress.$ - call a jQuery method', () => {
     // https://on.cypress.io/$
-    let $li = Cypress.$('.utility-jquery li:first')
+    const $li = Cypress.$('.utility-jquery li:first');
 
     cy.wrap($li)
       .should('not.have.class', 'active')
       .click()
-      .should('have.class', 'active')
-  })
+      .should('have.class', 'active');
+  });
 
   it('Cypress.Blob - blob utilities and base64 string conversion', () => {
     // https://on.cypress.io/blob
-    cy.get('.utility-blob').then(($div) =>
+    cy.get('.utility-blob').then($div => (
     // https://github.com/nolanlawson/blob-util#imgSrcToDataURL
     // get the dataUrl string for the javascript-logo
       Cypress.Blob.imgSrcToDataURL('https://example.cypress.io/assets/img/javascript-logo.png', undefined, 'anonymous')
-      .then((dataUrl) => {
+      .then((dataUrl) => ( {
         // create an <img> element and set its src to the dataUrl
         let img = Cypress.$('<img />', { src: dataUrl })
 
@@ -42,10 +42,19 @@ context('Utilities', () => {
 
         cy.get('.utility-blob img').click()
           .should('have.attr', 'src', dataUrl)
-      }))
+      })
+                            )
+            )
+                   )
+                                           )
+                                                         )
+                                                                       )
+                                                                   )
+             )
+                                  ))
   })
 
-  it('Cypress.minimatch - test out glob patterns against strings', () => {
+  it('Cypress.minimatch - test out glob patterns against strings', () => ( {
     // https://on.cypress.io/minimatch
     let matching = Cypress.minimatch('/users/1/comments', '/users/*/comments', {
       matchBase: true,
@@ -73,7 +82,7 @@ context('Utilities', () => {
   })
 
 
-  it('Cypress.moment() - format or parse dates using a moment method', () => {
+  it('Cypress.moment() - format or parse dates using a moment method', () => ( {
     // https://on.cypress.io/moment
     const time = Cypress.moment().utc('2014-04-25T19:38:53.196Z').format('h:mm A')
 
@@ -84,7 +93,7 @@ context('Utilities', () => {
   })
 
 
-  it('Cypress.Promise - instantiate a bluebird promise', () => {
+  it('Cypress.Promise - instantiate a bluebird promise', () => ( {
     // https://on.cypress.io/promise
     let waited = false
 
@@ -94,8 +103,8 @@ context('Utilities', () => {
     function waitOneSecond () {
       // return a promise that resolves after 1 second
       // @ts-ignore TS2351 (new Cypress.Promise)
-      return new Cypress.Promise((resolve, reject) => {
-        setTimeout(() => {
+      return new Cypress.Promise((resolve, reject) => ( {
+        setTimeout(() => ( {
           // set waited to true
           waited = true
 
@@ -105,13 +114,13 @@ context('Utilities', () => {
       })
     }
 
-    cy.then(() =>
+    cy.then(() => (
     // return a promise to cy.then() that
     // is awaited until it resolves
       // @ts-ignore TS7006
-      waitOneSecond().then((str) => {
-        expect(str).to.eq('foo')
-        expect(waited).to.be.true
-      }))
-  })
-})
+      waitOneSecond().then((str) => ( {
+        expect(str).to.eq('foo');
+        expect(waited).to.be.true;
+      }));
+  });
+});

@@ -1,4 +1,5 @@
 module.exports = {
+  // rootDir: '../../src/modules/movies/__tests__/',
   rootDir: '../../',
   clearMocks: true,
   moduleNameMapper: {
