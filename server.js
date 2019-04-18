@@ -5,7 +5,6 @@ const webpack = require('webpack');
 const path = require('path');
 const config = require('./webpack.config');
 
-const port = process.env.PORT || 3000;
 const app = express();
 
 app.use('/build', express.static(path.resolve(__dirname, './build')));
@@ -15,14 +14,25 @@ if (process.env.NODE_ENV === 'development') {
   const webpackHotMiddleware = require('webpack-hot-middleware');
   const compiler = webpack(config);
   console.log(process.env.NODE_ENV);
+
   app.use(webpackDevMiddleware(compiler, {
+    noInfo: true,
     publicPath: config.output.publicPath,
   }));
-  app.use(webpackHotMiddleware(compiler, {
-    log: false,
-    path: '/__webpack_hmr',
-    heartbeat: 2000,
-  }));
+
+  app.use(webpackHotMiddleware(compiler));
+
+  app.use('*', (req, res, next) => {
+    const filename = path.join(compiler.outputPath, '/index.html');
+    compiler.outputFileSystem.readFile(filename, (err, result) => {
+      if (err) {
+        return next(err);
+      }
+      res.set('content-type', 'text/html');
+      res.send(result);
+      return res.end();
+    });
+  });
 } else {
   app.use(express.static(path.join(__dirname, '/build')));
 
@@ -31,11 +41,6 @@ if (process.env.NODE_ENV === 'development') {
   });
 }
 
-app.get('/', (req, res) => {
-  res.sendFile('index.html', {
-    root: path.join(__dirname, 'src'),
-  });
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Example app listening on port 3000!\n');
 });
-
-// eslint-disable-next-line no-console
-app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import Header from './Header';
 import { getSearchBy, getSortBy, getSearchRequest } from '../../modules/filter/filterSelectors';
 import { fetchSearchMovies } from '../../modules/movies/moviesActions';
@@ -13,4 +14,4 @@ const mapDispatchToProps = {
   fetchSearchMovies,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

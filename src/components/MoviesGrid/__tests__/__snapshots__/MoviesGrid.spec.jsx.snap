@@ -4,78 +4,11 @@ exports[`MoviesGrid function for fetch next films should be called after scrolli
 <article
   className="movies_grid"
 >
-  <div
-    className="movie_element"
-    onClick={[Function]}
-    role="presentation"
-  >
-    <img
-      alt="Mobile Homes"
-      className="movie_element_poster"
-      src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
-    />
-    <div
-      className="wrapper_title_year"
-    >
-      <span
-        className="title"
-      >
-        Mobile Homes
-      </span>
-      <span
-        className="year"
-      >
-        2018
-      </span>
-    </div>
-    <div
-      className="genres"
-    >
-      <span
-        className="genre"
-      >
-        Drama
-      </span>
-    </div>
+  <div>
+    test
   </div>
-  <div
-    className="movie_element"
-    onClick={[Function]}
-    role="presentation"
-  >
-    <img
-      alt="Mademoiselle Paradis"
-      className="movie_element_poster"
-      src="https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg"
-    />
-    <div
-      className="wrapper_title_year"
-    >
-      <span
-        className="title"
-      >
-        Mademoiselle Paradis
-      </span>
-      <span
-        className="year"
-      >
-        2018
-      </span>
-    </div>
-    <div
-      className="genres"
-    >
-      <span
-        className="genre"
-      >
-        History
-      </span>
-      <span
-        className="genre"
-      >
-        Drama
-      </span>
-    </div>
+  <div>
+    test
   </div>
 </article>
 `;
@@ -84,78 +17,11 @@ exports[`MoviesGrid function for fetch next films should be called after scrolli
 <article
   className="movies_grid"
 >
-  <div
-    className="movie_element"
-    onClick={[Function]}
-    role="presentation"
-  >
-    <img
-      alt="Mobile Homes"
-      className="movie_element_poster"
-      src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
-    />
-    <div
-      className="wrapper_title_year"
-    >
-      <span
-        className="title"
-      >
-        Mobile Homes
-      </span>
-      <span
-        className="year"
-      >
-        2018
-      </span>
-    </div>
-    <div
-      className="genres"
-    >
-      <span
-        className="genre"
-      >
-        Drama
-      </span>
-    </div>
+  <div>
+    test
   </div>
-  <div
-    className="movie_element"
-    onClick={[Function]}
-    role="presentation"
-  >
-    <img
-      alt="Mademoiselle Paradis"
-      className="movie_element_poster"
-      src="https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg"
-    />
-    <div
-      className="wrapper_title_year"
-    >
-      <span
-        className="title"
-      >
-        Mademoiselle Paradis
-      </span>
-      <span
-        className="year"
-      >
-        2018
-      </span>
-    </div>
-    <div
-      className="genres"
-    >
-      <span
-        className="genre"
-      >
-        History
-      </span>
-      <span
-        className="genre"
-      >
-        Drama
-      </span>
-    </div>
+  <div>
+    test
   </div>
 </article>
 `;
@@ -164,78 +30,11 @@ exports[`MoviesGrid renders correctly 1`] = `
 <article
   className="movies_grid"
 >
-  <div
-    className="movie_element"
-    onClick={[Function]}
-    role="presentation"
-  >
-    <img
-      alt="Mobile Homes"
-      className="movie_element_poster"
-      src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
-    />
-    <div
-      className="wrapper_title_year"
-    >
-      <span
-        className="title"
-      >
-        Mobile Homes
-      </span>
-      <span
-        className="year"
-      >
-        2018
-      </span>
-    </div>
-    <div
-      className="genres"
-    >
-      <span
-        className="genre"
-      >
-        Drama
-      </span>
-    </div>
+  <div>
+    test
   </div>
-  <div
-    className="movie_element"
-    onClick={[Function]}
-    role="presentation"
-  >
-    <img
-      alt="Mademoiselle Paradis"
-      className="movie_element_poster"
-      src="https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg"
-    />
-    <div
-      className="wrapper_title_year"
-    >
-      <span
-        className="title"
-      >
-        Mademoiselle Paradis
-      </span>
-      <span
-        className="year"
-      >
-        2018
-      </span>
-    </div>
-    <div
-      className="genres"
-    >
-      <span
-        className="genre"
-      >
-        History
-      </span>
-      <span
-        className="genre"
-      >
-        Drama
-      </span>
-    </div>
+  <div>
+    test
   </div>
 </article>
 `;
@@ -245,78 +44,11 @@ Array [
   <article
     className="movies_grid"
   >
-    <div
-      className="movie_element"
-      onClick={[Function]}
-      role="presentation"
-    >
-      <img
-        alt="Mobile Homes"
-        className="movie_element_poster"
-        src="https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg"
-      />
-      <div
-        className="wrapper_title_year"
-      >
-        <span
-          className="title"
-        >
-          Mobile Homes
-        </span>
-        <span
-          className="year"
-        >
-          2018
-        </span>
-      </div>
-      <div
-        className="genres"
-      >
-        <span
-          className="genre"
-        >
-          Drama
-        </span>
-      </div>
+    <div>
+      test
     </div>
-    <div
-      className="movie_element"
-      onClick={[Function]}
-      role="presentation"
-    >
-      <img
-        alt="Mademoiselle Paradis"
-        className="movie_element_poster"
-        src="https://image.tmdb.org/t/p/w500/k93b9hE30fdYG63atluVP5aDm2V.jpg"
-      />
-      <div
-        className="wrapper_title_year"
-      >
-        <span
-          className="title"
-        >
-          Mademoiselle Paradis
-        </span>
-        <span
-          className="year"
-        >
-          2018
-        </span>
-      </div>
-      <div
-        className="genres"
-      >
-        <span
-          className="genre"
-        >
-          History
-        </span>
-        <span
-          className="genre"
-        >
-          Drama
-        </span>
-      </div>
+    <div>
+      test
     </div>
   </article>,
   <div

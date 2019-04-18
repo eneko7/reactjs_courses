@@ -1,12 +1,18 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import configureMockStore from 'redux-mock-store';
+import { MemoryRouter } from 'react-router';
 import { Provider } from 'react-redux';
 
 import ResultLineContainer from '../index';
 
 const mockStore = configureMockStore();
 const store = mockStore({
+  filter: {
+    searchBy: 'title',
+    sortBy: 'release_date',
+    searchRequest: 'test',
+  },
   quantity: 2,
   fetchDefaultMovies: () => ('Hello'),
   movies: [
@@ -52,7 +58,9 @@ describe('ResultLine', () => {
   it('ResultLineContainer test ', () => {
     TestRenderer.create(
       <Provider store={store}>
-        <ResultLineContainer />
+        <MemoryRouter>
+          <ResultLineContainer />
+        </MemoryRouter>
       </Provider>,
     );
     expect(ResultLineContainer).toBeCalledTimes(1);

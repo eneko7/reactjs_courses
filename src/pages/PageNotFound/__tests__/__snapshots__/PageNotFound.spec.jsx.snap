@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageNotFound renders correctly 1`] = `
+<ErrorBoundary>
+  <withRouter(Connect(Header)) />
+  <article
+    className="page_not_found_wrap"
+  >
+    <span
+      className="page_not_found_wrap__title"
+    >
+      404 ERROR
+    </span>
+    <span
+      className="page_not_found_wrap__title"
+    >
+      Page Not Found
+    </span>
+  </article>
+  <Footer />
+</ErrorBoundary>
+`;

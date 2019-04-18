@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetails renders correctly 1`] = `
+<div
+  className="movie_details"
+>
+  <div
+    className="top_line"
+  >
+    <span
+      className="logo"
+    >
+      NetflixRoulette
+    </span>
+    <button
+      className="details_button"
+      onClick={[Function]}
+      type="button"
+    >
+      search
+    </button>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="movie_element_poster poster"
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(75deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 30%), url(https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg)",
+        }
+      }
+    />
+    <div
+      className="wrapper_right"
+    >
+      <span
+        className="movie_titile"
+      >
+        Mobile Homes
+      </span>
+      <div
+        className="genres genresClass"
+      >
+        <span
+          className="genre genresClass"
+        >
+          Drama
+        </span>
+      </div>
+      <div
+        className="wrapper_year_and_time"
+      >
+        <span
+          className="year"
+        >
+          2018
+        </span>
+        <span
+          className="time"
+        >
+           105  min
+        </span>
+      </div>
+      <div
+        className="movie_description"
+      >
+        In forgotten towns along the American border, a young mother drifts from one motel to the next with her intoxicating boyfriend and her 8-year-old son. The makeshift family scrapes by, living one hustle at a time, until the discovery of a mobile home community offers an alternative life.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MovieDetails renders correctly 2`] = `
+<div
+  className="movie_details"
+>
+  <div
+    className="top_line"
+  >
+    <span
+      className="logo"
+    >
+      NetflixRoulette
+    </span>
+    <button
+      className="details_button"
+      onClick={[Function]}
+      type="button"
+    >
+      search
+    </button>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="movie_element_poster poster"
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(75deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 30%), url(https://image.tmdb.org/t/p/w500/of72rtl3j0C9yJMlSJZHXnaByz8.jpg)",
+        }
+      }
+    />
+    <div
+      className="wrapper_right"
+    >
+      <span
+        className="movie_titile"
+      >
+        Mobile Homes
+      </span>
+      <div
+        className="genres genresClass"
+      >
+        <span
+          className="genre genresClass"
+        >
+          Drama
+        </span>
+      </div>
+      <div
+        className="wrapper_year_and_time"
+      >
+        <span
+          className="year"
+        >
+          2018
+        </span>
+        <span
+          className="time"
+        >
+           105  min
+        </span>
+      </div>
+      <div
+        className="movie_description"
+      >
+        In forgotten towns along the American border, a young mother drifts from one motel to the next with her intoxicating boyfriend and her 8-year-old son. The makeshift family scrapes by, living one hustle at a time, until the discovery of a mobile home community offers an alternative life.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MovieDetails renders correctly 3`] = `
+<div
+  className="movie_details"
+>
+  <div
+    className="top_line"
+  >
+    <span
+      className="logo"
+    >
+      NetflixRoulette
+    </span>
+    <button
+      className="details_button"
+      onClick={[Function]}
+      type="button"
+    >
+      search
+    </button>
+  </div>
+  <div
+    className="main"
+  >
+    <div
+      className="movie_element_poster poster"
+      style={
+        Object {
+          "backgroundImage": "linear-gradient(75deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 30%), url()",
+        }
+      }
+    />
+    <div
+      className="wrapper_right"
+    >
+      <span
+        className="movie_titile"
+      />
+      <div
+        className="wrapper_year_and_time"
+      >
+        <span
+          className="year"
+        >
+          NaN
+        </span>
+        <span
+          className="time"
+        >
+          
+        </span>
+      </div>
+      <div
+        className="movie_description"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`MovieDetails renders correctly 4`] = `
+<div
+  className="loading"
+>
+  <div
+    className="movies_grid_wrapper_loading"
+    id="loading"
+  >
+    <div
+      className="movies_grid_wrapper_loading"
+    />
+    <div
+      className="movies_grid_wrapper_loading"
+    />
+    <div
+      className="movies_grid_wrapper_loading"
+    />
+  </div>
+  <div
+    className="movies_grid_wrapper_loading_text"
+    id="loading_text"
+  >
+    <span
+      className="movies_grid_wrapper_loading_text_span"
+    >
+      LOADING
+    </span>
+  </div>
+</div>
+`;

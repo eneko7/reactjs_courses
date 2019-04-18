@@ -4,6 +4,7 @@
   cursor: pointer;
   color: #fff;
   border: none;
+  border-radius: 3px;
   background-color: $roseColor;
   padding: 5px 100px;
   margin-top: 15px;
@@ -12,7 +13,21 @@
   text-transform: uppercase;
 }
 
-.header_button:focus {
+.details_button {
+  cursor: pointer;
+  color: $roseColor;
+  border: none;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 8px 80px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: $fontFamilyBold;
+  text-transform: uppercase;
+}
+
+.header_button:focus,
+.details_button:focus {
   outline: none;
 }
 
@@ -21,5 +36,10 @@
     margin: 15px auto;
     display: block;
     padding: 7px 100px;
+  }
+
+  .details_button {
+    margin: 0;
+    padding: 6px 50px;
   }
 }

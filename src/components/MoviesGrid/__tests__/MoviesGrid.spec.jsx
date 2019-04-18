@@ -4,12 +4,14 @@ import TestRenderer from 'react-test-renderer';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router';
 import MoviesGrid from '../MoviesGrid';
 
 
 // const shallow = new ShallowRenderer();
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
+jest.mock('../MovieElement/MovieElementContainer', () => () => <div>test</div>);
 const data = {
   movies: [
     {
@@ -152,7 +154,9 @@ describe('MoviesGrid', () => {
   it('renders correctly', () => {
     const component = TestRenderer.create(
       <Provider store={store}>
-        <MoviesGrid {...data} />
+        <MemoryRouter>
+          <MoviesGrid {...data} />
+        </MemoryRouter>
       </Provider>,
     );
     expect(component).toMatchSnapshot();
@@ -161,7 +165,9 @@ describe('MoviesGrid', () => {
   it('renders correctly', () => {
     const component = TestRenderer.create(
       <Provider store={store}>
-        <MoviesGrid {...dataDone} />
+        <MemoryRouter>
+          <MoviesGrid {...dataDone} />
+        </MemoryRouter>
       </Provider>,
     );
     expect(component).toMatchSnapshot();
@@ -170,7 +176,9 @@ describe('MoviesGrid', () => {
   it('renders correctly', () => {
     const component = TestRenderer.create(
       <Provider store={storeFailed}>
-        <MoviesGrid {...failedData} />
+        <MemoryRouter>
+          <MoviesGrid {...failedData} />
+        </MemoryRouter>
       </Provider>,
     );
     expect(component).toMatchSnapshot();
@@ -197,7 +205,9 @@ describe('MoviesGrid', () => {
     });
     const component = TestRenderer.create(
       <Provider store={store}>
-        <MoviesGrid {...data} />
+        <MemoryRouter>
+          <MoviesGrid {...data} />
+        </MemoryRouter>
       </Provider>,
     );
     eventMap.scroll();
@@ -225,7 +235,9 @@ describe('MoviesGrid', () => {
     });
     const component = TestRenderer.create(
       <Provider store={store}>
-        <MoviesGrid {...data} />
+        <MemoryRouter>
+          <MoviesGrid {...data} />
+        </MemoryRouter>
       </Provider>,
     );
     eventMap.scroll();
@@ -235,7 +247,9 @@ describe('MoviesGrid', () => {
   it('lifecycle method should have been called', () => {
     const component = TestRenderer.create(
       <Provider store={store}>
-        <MoviesGrid {...data} />
+        <MemoryRouter>
+          <MoviesGrid {...data} />
+        </MemoryRouter>
       </Provider>,
     );
     component.unmount();

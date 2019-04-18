@@ -1,19 +1,19 @@
 import React from 'react';
-import Header from '../Header';
-import ResultLine from '../ResultLine';
-import MoviesGrid from '../MoviesGrid';
-import Footer from '../Footer';
-import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
+import { Switch, Route } from 'react-router-dom';
+import MoviesPage from '../../pages/MoviesPage';
+import MovieDetailsPage from '../../pages/MovieDetailsPage';
+import PageNotFound from '../../pages/PageNotFound';
 import styles from './App.scss';
 
 const App = () => (
   <main className={styles.main}>
-    <ErrorBoundary>
-      <Header />
-      <ResultLine />
-      <MoviesGrid />
-      <Footer />
-    </ErrorBoundary>
+    <Switch>
+      <Route exact path="/" component={MoviesPage} />
+      <Route exact path="/search" component={MoviesPage} />
+      <Route exact path="/movies" component={MoviesPage} />
+      <Route exact path="/movie/:id" component={MovieDetailsPage} />
+      <Route path="*" component={PageNotFound} />
+    </Switch>
   </main>
 
 );

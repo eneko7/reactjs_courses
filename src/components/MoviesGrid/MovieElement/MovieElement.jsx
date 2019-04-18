@@ -9,10 +9,23 @@ class MovieElement extends Component {
     isOpenMovie: false,
   };
 
-  openMovie = () => {
+  openMovie = (id) => {
+    const {
+      history,
+      fetchMovie,
+      movie,
+      fetchSearchMovies,
+    } = this.props;
+    fetchMovie(id);
+    history.push(`/movie/${id}`);
     this.setState(prevState => ({
       isOpenMovie: !prevState.isOpenMovie,
     }));
+    window.scrollTo(0, 0);
+    const { genres } = movie;
+    if (genres) {
+      fetchSearchMovies(genres.join(', '), 'genres', 'release_date');
+    }
   };
 
   render() {
@@ -21,7 +34,7 @@ class MovieElement extends Component {
       return null;
     }
     return (
-      <div className={styles.movie_element} onClick={this.openMovie} role="presentation">
+      <div className={styles.movie_element} onClick={this.openMovie.bind(null, data.id)} role="presentation">
         <ImagePoster src={data.poster_path} alt={data.title} />
         <div className={styles.wrapper_title_year}>
           <span className={styles.title}>{data.title}</span>
@@ -37,9 +50,14 @@ class MovieElement extends Component {
 
 MovieElement.defaultProps = {
   data: null,
+  fetchMovie: () => null,
 };
 
 MovieElement.propTypes = {
+  history: propTypes.objectOf(propTypes.any).isRequired,
+  fetchMovie: propTypes.func,
+  fetchSearchMovies: propTypes.func.isRequired,
+  movie: propTypes.objectOf(propTypes.any).isRequired,
   data: propTypes.objectOf(
     propTypes.oneOfType([
       propTypes.string,

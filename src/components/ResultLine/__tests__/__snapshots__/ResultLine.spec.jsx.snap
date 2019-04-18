@@ -7,8 +7,49 @@ exports[`ResultLine renders correctly 1`] = `
   <span
     className="result_line__count_founded_films"
   >
-    1 movies found
+    1 movies found 
   </span>
-  <SortBy />
+  <div
+    className="sort_by"
+  >
+    <span
+      className="sort_by__span"
+    >
+      Sort by
+    </span>
+    <div>
+      test
+    </div>
+    <div>
+      test
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ResultLine renders correctly 2`] = `
+<div
+  className="result_line"
+>
+  <span
+    className="result_line__count_founded_films"
+  >
+    1 movies found by title: test
+  </span>
+  <div
+    className="sort_by"
+  >
+    <span
+      className="sort_by__span"
+    >
+      Sort by
+    </span>
+    <div>
+      test
+    </div>
+    <div>
+      test
+    </div>
+  </div>
 </div>
 `;

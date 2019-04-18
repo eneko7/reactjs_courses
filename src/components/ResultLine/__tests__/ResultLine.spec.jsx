@@ -1,12 +1,26 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
+import { MemoryRouter } from 'react-router';
+import TestRenderer from 'react-test-renderer';
 import ResultLine from '../ResultLine';
 
-const renderer = new ShallowRenderer();
-renderer.render(<ResultLine />);
+jest.mock('../../SortInput/SortInputContainer', () => () => <div>test</div>);
+
 describe('ResultLine', () => {
   it('renders correctly', () => {
-    const result = renderer.getRenderOutput();
-    expect(result).toMatchSnapshot();
+    const component = TestRenderer.create(
+      <MemoryRouter>
+        <ResultLine location={{ pathname: 'test' }} searchBy="title" sortBy="release_date" />
+      </MemoryRouter>,
+    );
+    expect(component).toMatchSnapshot();
+  });
+
+  it('renders correctly', () => {
+    const component = TestRenderer.create(
+      <MemoryRouter>
+        <ResultLine location={{ pathname: 'test' }} searchRequest="test" searchBy="title" sortBy="release_date" />
+      </MemoryRouter>,
+    );
+    expect(component).toMatchSnapshot();
   });
 });

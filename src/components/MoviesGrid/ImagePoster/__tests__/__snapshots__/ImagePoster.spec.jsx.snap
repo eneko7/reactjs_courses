@@ -1,9 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ImagePoster renders correctly 1`] = `
-<img
-  alt="test"
+<div
   className="movie_element_poster"
-  src="test"
+  style={
+    Object {
+      "backgroundImage": "linear-gradient(75deg, rgba(0, 0, 0, 1) 10%, rgba(255, 255, 255, 0) 30%), url(test)",
+    }
+  }
 />
 `;

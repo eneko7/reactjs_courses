@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
+import queryString from 'query-string';
 import PropTypes from 'prop-types';
 import styles from './Search.scss';
 
 class Search extends Component {
   searchInput = React.createRef();
+
+  componentDidMount() {
+    const {
+      location: { search },
+      updateSearchRequest,
+      fetchSearchMovies,
+      searchBy,
+      sortBy,
+    } = this.props;
+    const parsed = queryString.parse(search);
+    const { q } = parsed;
+    updateSearchRequest(q || '');
+    fetchSearchMovies(q || '', searchBy, sortBy);
+  }
 
   saveSearchRequest = () => {
     const { updateSearchRequest } = this.props;
@@ -12,8 +27,18 @@ class Search extends Component {
 
   searchHandler = (evenet) => {
     evenet.preventDefault();
-    const { fetchSearchMovies, sortBy, searchBy } = this.props;
+    const {
+      fetchSearchMovies,
+      sortBy,
+      searchBy,
+      history,
+    } = this.props;
     fetchSearchMovies(this.searchInput.current.value, searchBy, sortBy);
+    if (this.searchInput.current.value !== '') {
+      history.push(`/search?q=${this.searchInput.current.value}`);
+    } else {
+      history.push('');
+    }
   };
 
   render() {
@@ -47,6 +72,10 @@ Search.propTypes = {
   searchRequest: PropTypes.string,
   fetchSearchMovies: PropTypes.func.isRequired,
   updateSearchRequest: PropTypes.func.isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
+  location: PropTypes.shape({
+    search: PropTypes.string,
+  }).isRequired,
 };
 
 export default Search;

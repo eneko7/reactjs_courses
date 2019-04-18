@@ -1,13 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import propTypes from 'prop-types';
-import MovieElement from './MovieElement/MovieElement';
+import MovieElement from './MovieElement';
 import Loading from '../Loading';
 import styles from './MoviesGrid.scss';
 
 class MoviesGrid extends Component {
   componentDidMount() {
-    const { fetchDefaultMovies } = this.props;
-    fetchDefaultMovies();
     global.document.addEventListener('scroll', this.onScrollHandler);
   }
 
@@ -32,7 +30,7 @@ class MoviesGrid extends Component {
         </article>
       );
     }
-    const data = movies.map(item => <MovieElement data={item} key={item.id} />);
+    const data = movies.map(item => <MovieElement key={item.id} data={item} />);
     return (
       <Fragment>
         <article className={styles.movies_grid}>
@@ -45,7 +43,6 @@ class MoviesGrid extends Component {
 }
 
 MoviesGrid.propTypes = {
-  fetchDefaultMovies: propTypes.func.isRequired,
   fetchNextMovies: propTypes.func.isRequired,
   isFetchingMovies: propTypes.bool.isRequired,
   movies: propTypes.arrayOf(propTypes.object).isRequired,

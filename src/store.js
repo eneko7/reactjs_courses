@@ -7,11 +7,13 @@ import {
 
 import thunk from 'redux-thunk';
 import movies from './modules/movies/moviesReducer';
+import movie from './modules/movie/movieReducer';
 import filter from './modules/filter/filterReducer';
 
 const rootReducer = combineReducers({
   movies,
   filter,
+  movie,
 });
 
 const initialState = {};

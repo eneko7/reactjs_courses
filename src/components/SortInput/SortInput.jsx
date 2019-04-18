@@ -37,6 +37,7 @@ class SortInput extends Component {
 
 SortInput.defaultProps = {
   defaultChecked: false,
+  searchRequest: '',
 };
 
 SortInput.propTypes = {
@@ -46,7 +47,7 @@ SortInput.propTypes = {
   inputClass: propTypes.string.isRequired,
   labelClass: propTypes.string.isRequired,
   searchBy: propTypes.string.isRequired,
-  searchRequest: propTypes.string.isRequired,
+  searchRequest: propTypes.string,
   defaultChecked: propTypes.bool,
   updateFilterSearch: propTypes.func.isRequired,
   updateFilterSort: propTypes.func.isRequired,

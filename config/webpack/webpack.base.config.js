@@ -26,6 +26,7 @@ const conf = {
     new HtmlWebpackPlugin({
       title: 'Homework part 1',
       filename: 'index.html',
+      favicon: './src/favicon.ico',
       template: './src/index.html',
     }),
     new CleanWebpackPlugin(['build'], {

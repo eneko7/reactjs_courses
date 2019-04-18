@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieDetailsPage renders correctly 1`] = `
+<ErrorBoundary>
+  <withRouter(Connect(MovieDetails)) />
+  <withRouter(Connect(ResultLine)) />
+  <Connect(MoviesGrid) />
+  <Footer />
+</ErrorBoundary>
+`;

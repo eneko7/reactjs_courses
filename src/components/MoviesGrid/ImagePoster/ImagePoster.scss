@@ -5,6 +5,18 @@
   height: 500px;
   object-fit: cover;
   margin-bottom: 20px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.poster {
+  width: 35%;
+  height: 525px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: -3%;
 }
 
 @media (max-width: $laptop) {
