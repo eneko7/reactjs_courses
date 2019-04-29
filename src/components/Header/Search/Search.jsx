@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import queryString from 'query-string';
 import PropTypes from 'prop-types';
@@ -11,12 +14,14 @@ class Search extends Component {
       location: { search },
       updateSearchRequest,
       fetchSearchMovies,
+      fetchFilms,
       searchBy,
       sortBy,
     } = this.props;
     const parsed = queryString.parse(search);
     const { q } = parsed;
     updateSearchRequest(q || '');
+    // this.props.dispatch(fetchFilms());
     fetchSearchMovies(q || '', searchBy, sortBy);
   }
 
@@ -73,6 +78,7 @@ Search.propTypes = {
   fetchSearchMovies: PropTypes.func.isRequired,
   updateSearchRequest: PropTypes.func.isRequired,
   history: PropTypes.objectOf(PropTypes.any).isRequired,
+  fetchFilms: PropTypes.func.isRequired,
   location: PropTypes.shape({
     search: PropTypes.string,
   }).isRequired,

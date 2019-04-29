@@ -44,8 +44,12 @@ class MoviesGrid extends Component {
 
 MoviesGrid.propTypes = {
   fetchNextMovies: propTypes.func.isRequired,
+  // fetchSearchMovies: propTypes.func.isRequired,
   isFetchingMovies: propTypes.bool.isRequired,
   movies: propTypes.arrayOf(propTypes.object).isRequired,
+  // searchBy: propTypes.string.isRequired,
+  // searchRequest: propTypes.string.isRequired,
+  // sortBy: propTypes.string.isRequired,
 };
 
 export default MoviesGrid;

@@ -1,1 +1,3 @@
-export { default } from './MoviesPage';
+import MoviesPage from './MoviesPageContainer';
+
+export default MoviesPage;

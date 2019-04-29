@@ -1,3 +1,32 @@
+// import {
+//   createStore,
+//   combineReducers,
+//   applyMiddleware,
+// } from 'redux';
+// import createSagaMiddleware, { END } from 'redux-saga';
+
+// import movies from './modules/movies/moviesReducer';
+// import movie from './modules/movie/movieReducer';
+// import filter from './modules/filter/filterReducer';
+// import rootSaga from './modules/saga';
+
+// const rootReducer = combineReducers({
+//   movies,
+//   filter,
+//   movie,
+// });
+
+// const sagaMiddleware = createSagaMiddleware();
+
+// export default (initialState) => {
+//   const store = createStore(rootReducer, initialState, applyMiddleware(sagaMiddleware));
+//   sagaMiddleware.run(rootSaga);
+//   store.runSaga = () => sagaMiddleware.run(rootSaga);
+//   store.close = () => store.dispatch(END);
+
+//   return store;
+// };
+
 import {
   createStore,
   combineReducers,
@@ -23,6 +52,5 @@ export default () => createStore(
   initialState,
   compose(
     applyMiddleware(thunk),
-    global.window.devToolsExtension ? global.window.__REDUX_DEVTOOLS_EXTENSION__() : f => f, // eslint-disable-line
   ),
 );

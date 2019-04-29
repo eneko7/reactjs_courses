@@ -1,23 +1,23 @@
 import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate } from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import getStore from './store';
+
 import Loader from './components/Loading';
-// import Root from './components/Root';
+import configureStore from './store';
+
 const Root = React.lazy(() => import('./components/Root'));
 
-const store = getStore();
+const store = configureStore(window.PRELOADED_STATE);
 
-ReactDOM.render(
-  <BrowserRouter>
+const root = (
+  <BrowserRouter location={['/']} context={null}>
     <Provider store={store}>
       <Suspense fallback={<Loader />}>
         <Root />
       </Suspense>
     </Provider>
-  </BrowserRouter>,
-  document.getElementById('root'),
+  </BrowserRouter>
 );
 
-module.hot.accept();
+hydrate(root, document.getElementById('root'));
