@@ -42,11 +42,10 @@ export default function serverRenderer() {
         </Provider>
       </StaticRouter>
     );
-    // console.log(store.runSaga());
+
     // store.runSaga().done.then(() => {
     const htmlString = renderToString(renderRoot());
 
-    // context.url will contain the URL to redirect to if a <Redirect> was used
     if (context.url) {
       res.writeHead(302, {
         Location: context.url,

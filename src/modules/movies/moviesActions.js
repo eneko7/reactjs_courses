@@ -70,8 +70,8 @@ export function fetchSearchMovies(searchRequest, searchBy, sortBy) {
   };
 }
 
-function* watchFetchMovies() {
-  yield call(fetchSearchMovies);
+export function* watchFetchMovies() {
+  yield takeLatest(DATA_SUCCESS, fetchMovies);
 }
 
 export function fetchDefaultMovies() {
