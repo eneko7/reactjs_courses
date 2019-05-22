@@ -42,23 +42,22 @@ export default function serverRenderer() {
         </Provider>
       </StaticRouter>
     );
+    store.runSaga().toPromise().then(() => {
+      const htmlString = renderToString(renderRoot());
 
-    // store.runSaga().done.then(() => {
-    const htmlString = renderToString(renderRoot());
+      if (context.url) {
+        res.writeHead(302, {
+          Location: context.url,
+        });
+        res.end();
+        return;
+      }
 
-    if (context.url) {
-      res.writeHead(302, {
-        Location: context.url,
-      });
-      res.end();
-      return;
-    }
-
-    const preloadedState = store.getState();
-    res.send(renderHTML(htmlString, preloadedState));
-    // });
+      const preloadedState = store.getState();
+      res.send(renderHTML(htmlString, preloadedState));
+    });
 
     renderToString(renderRoot());
-    // store.close();
+    store.close();
   };
 }

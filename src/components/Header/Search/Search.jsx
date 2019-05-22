@@ -20,9 +20,9 @@ class Search extends Component {
     } = this.props;
     const parsed = queryString.parse(search);
     const { q } = parsed;
-    updateSearchRequest(q || '');
-    // this.props.dispatch(fetchFilms());
-    fetchSearchMovies(q || '', searchBy, sortBy);
+    // updateSearchRequest(q || '');
+    // // this.props.dispatch(fetchFilms());
+    // fetchSearchMovies(q || '', searchBy, sortBy);
   }
 
   saveSearchRequest = () => {
