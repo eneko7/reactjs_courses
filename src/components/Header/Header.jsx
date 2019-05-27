@@ -13,7 +13,7 @@ class Header extends Component {
     } = this.props;
     fetchSearchMovies(searchRequest, searchBy, sortBy);
     if (searchRequest !== '') {
-      history.push(`/search?q=${searchRequest}`);
+      history.push(`/search?query=${searchRequest}&searchBy=${searchBy}&sortBy=${sortBy}`);
     } else {
       history.push('');
     }

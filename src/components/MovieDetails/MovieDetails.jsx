@@ -8,19 +8,19 @@ import Loader from '../Loading';
 import Genres from '../Genres';
 
 class MovieDetails extends PureComponent {
-  componentDidMount() {
-    this.getMovie();
-  }
+  // componentDidMount() {
+  //   this.getMovie();
+  // }
 
-  componentWillUnmount() {
-    const { fetchMovie } = this.props;
-    return fetchMovie(0);
-  }
+  // componentWillUnmount() {
+  //   const { fetchMovie } = this.props;
+  //   return fetchMovie(0);
+  // }
 
-  getMovie = () => {
-    const { location: { pathname }, fetchMovie } = this.props;
-    return fetchMovie(pathname.substr(7));
-  };
+  // getMovie = () => {
+  //   const { location: { pathname }, fetchMovie } = this.props;
+  //   return fetchMovie(pathname.substr(7));
+  // };
 
   returnMain = () => {
     const { history } = this.props;
@@ -28,12 +28,12 @@ class MovieDetails extends PureComponent {
   };
 
   render() {
-    const { movie, fetchSearchMovies } = this.props;
+    const { movie } = this.props;
     if (!movie) return <Loader />;
-    const { genres } = movie;
-    if (genres) {
-      fetchSearchMovies(genres.join(', '), 'genres', 'release_date');
-    }
+    // const { genres } = movie;
+    // if (genres) {
+    //   fetchSearchMovies(genres.join(', '), 'genres', 'release_date');
+    // }
     return (
       <div className={styles.movie_details}>
         <div className={styles.top_line}>
@@ -70,8 +70,8 @@ MovieDetails.propTypes = {
     search: propTypes.string,
   }).isRequired,
   movie: propTypes.objectOf(propTypes.any),
-  fetchMovie: propTypes.func.isRequired,
-  fetchSearchMovies: propTypes.func.isRequired,
+  // fetchMovie: propTypes.func.isRequired,
+  // fetchSearchMovies: propTypes.func.isRequired,
 };
 
 export default MovieDetails;

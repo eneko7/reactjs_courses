@@ -13,7 +13,7 @@ class MovieElement extends Component {
     const {
       history,
       fetchMovie,
-      movie,
+      genres,
       fetchSearchMovies,
     } = this.props;
     fetchMovie(id);
@@ -22,9 +22,9 @@ class MovieElement extends Component {
       isOpenMovie: !prevState.isOpenMovie,
     }));
     window.scrollTo(0, 0);
-    const { genres } = movie;
     if (genres) {
       fetchSearchMovies(genres.join(', '), 'genres', 'release_date');
+      history.push(`/movie/${id}?searchBy=${genres.join(', ')}`);
     }
   };
 
@@ -50,6 +50,7 @@ class MovieElement extends Component {
 
 MovieElement.defaultProps = {
   data: null,
+  genres: [],
   fetchMovie: () => null,
 };
 
@@ -57,7 +58,7 @@ MovieElement.propTypes = {
   history: propTypes.objectOf(propTypes.any).isRequired,
   fetchMovie: propTypes.func,
   fetchSearchMovies: propTypes.func.isRequired,
-  movie: propTypes.objectOf(propTypes.any).isRequired,
+  genres: propTypes.arrayOf(propTypes.string),
   data: propTypes.objectOf(
     propTypes.oneOfType([
       propTypes.string,
