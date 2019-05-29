@@ -3,10 +3,10 @@ import { withRouter } from 'react-router';
 import MovieDetails from './MovieDetails';
 import { fetchMovie } from '../../modules/movie/movieActions';
 import { fetchSearchMovies } from '../../modules/movies/moviesActions';
-import { getMovie, getIsFetchingMovie, getIsFetchedMovie } from '../../modules/movie/movieSelectors';
+import { getMovieState, getIsFetchingMovie, getIsFetchedMovie } from '../../modules/movie/movieSelectors';
 
 const mapStateToProps = state => ({
-  movie: getMovie(state),
+  movie: getMovieState(state),
   isFetchingMovie: getIsFetchingMovie(state),
   isFetchedMovie: getIsFetchedMovie(state),
 });

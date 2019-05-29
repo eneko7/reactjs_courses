@@ -3,10 +3,10 @@ import { withRouter } from 'react-router';
 import MovieElement from './MovieElement';
 import { fetchMovie } from '../../../modules/movie/movieActions';
 import { fetchSearchMovies } from '../../../modules/movies/moviesActions';
-import { getMovie, getIsFetchingMovie, getIsFetchedMovie } from '../../../modules/movie/movieSelectors';
+import { getMovieState, getIsFetchingMovie, getIsFetchedMovie } from '../../../modules/movie/movieSelectors';
 
 const mapStateToProps = (state) => {
-  const movie = getMovie(state);
+  const movie = getMovieState(state);
   return {
     genres: movie.genres,
     movie,

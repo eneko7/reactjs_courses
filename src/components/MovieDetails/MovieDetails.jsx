@@ -8,20 +8,6 @@ import Loader from '../Loading';
 import Genres from '../Genres';
 
 class MovieDetails extends PureComponent {
-  // componentDidMount() {
-  //   this.getMovie();
-  // }
-
-  // componentWillUnmount() {
-  //   const { fetchMovie } = this.props;
-  //   return fetchMovie(0);
-  // }
-
-  // getMovie = () => {
-  //   const { location: { pathname }, fetchMovie } = this.props;
-  //   return fetchMovie(pathname.substr(7));
-  // };
-
   returnMain = () => {
     const { history } = this.props;
     history.push('');
@@ -30,10 +16,6 @@ class MovieDetails extends PureComponent {
   render() {
     const { movie } = this.props;
     if (!movie) return <Loader />;
-    // const { genres } = movie;
-    // if (genres) {
-    //   fetchSearchMovies(genres.join(', '), 'genres', 'release_date');
-    // }
     return (
       <div className={styles.movie_details}>
         <div className={styles.top_line}>
