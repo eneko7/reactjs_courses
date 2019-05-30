@@ -1,41 +1,27 @@
-/* eslint-disable no-console */
-/* eslint-disable global-require */
 const express = require('express');
-const webpack = require('webpack');
 const path = require('path');
-const config = require('./webpack.config');
+const webpack = require('webpack');
 
-const port = process.env.PORT || 3000;
 const app = express();
 
-app.use('/build', express.static(path.resolve(__dirname, './build')));
-
-if (process.env.NODE_ENV === 'development') {
-  const webpackDevMiddleware = require('webpack-dev-middleware');
-  const webpackHotMiddleware = require('webpack-hot-middleware');
-  const compiler = webpack(config);
-  console.log(process.env.NODE_ENV);
-  app.use(webpackDevMiddleware(compiler, {
-    publicPath: config.output.publicPath,
-  }));
-  app.use(webpackHotMiddleware(compiler, {
-    log: false,
-    path: '/__webpack_hmr',
-    heartbeat: 2000,
-  }));
+if (process.env.NODE_ENV === 'production') {
+  const serverRenderer = require('./build/js/serverRenderer').default; // eslint-disable-line global-require
+  app.use(express.static(path.join(__dirname, 'build')));
+  app.use(express.static('public'));
+  app.use(serverRenderer());
 } else {
-  app.use(express.static(path.join(__dirname, '/build')));
+  const webpackDevMiddleware = require('webpack-dev-middleware'); // eslint-disable-line global-require
+  const webpackHotMiddleware = require('webpack-hot-middleware'); // eslint-disable-line global-require
+  const webpackHotServerMiddleware = require('webpack-hot-server-middleware'); // eslint-disable-line global-require
+  const webpackConfig = require('./config/webpack'); // eslint-disable-line global-require
 
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(`${__dirname}/build/index.html`));
-  });
+  const compiler = webpack(webpackConfig);
+
+  app.use(webpackDevMiddleware(compiler));
+  app.use(webpackHotMiddleware(compiler.compilers.find(c => c.name === 'client')));
+  app.use(webpackHotServerMiddleware(compiler));
 }
 
-app.get('/', (req, res) => {
-  res.sendFile('index.html', {
-    root: path.join(__dirname, 'src'),
-  });
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Example app listening on port 3000!\n'); // eslint-disable-line no-console
 });
-
-// eslint-disable-next-line no-console
-app.listen(port, () => console.log(`Listening on port ${port}`));

@@ -1,21 +1,4 @@
-const merge = require('webpack-merge');
-const path = require('path');
-const webpack = require('webpack');
-
-module.exports = merge(require('./webpack.base.config'), {
-  output: {
-    path: path.resolve(__dirname, '../../build'),
-    filename: 'main.js',
-    publicPath: '/',
-  },
-  mode: 'development',
-  devtool: 'source-map',
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
-    'webpack/hot/only-dev-server',
-    path.join(__dirname, '../../src/index.jsx'),
-  ],
+module.exports = {
   module: {
     rules: [
       {
@@ -48,9 +31,14 @@ module.exports = merge(require('./webpack.base.config'), {
           },
         ],
       },
+      {
+        enforce: 'pre',
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+        ],
+      },
     ],
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
-});
+};

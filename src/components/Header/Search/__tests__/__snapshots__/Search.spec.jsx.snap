@@ -44,6 +44,50 @@ exports[`Search render click on icon correctly 1`] = `
 </form>
 `;
 
+exports[`Search render click on icon correctly 2`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    className="search_input"
+    name="search"
+    onChange={[Function]}
+    placeholder="Enter movie title"
+    type="text"
+    value="test"
+  />
+  <span
+    className="search_icon"
+    onClick={[Function]}
+    role="presentation"
+  >
+    ↩
+  </span>
+</form>
+`;
+
+exports[`Search render click on icon correctly 3`] = `
+<form
+  onSubmit={[Function]}
+>
+  <input
+    className="search_input"
+    name="search"
+    onChange={[Function]}
+    placeholder="Enter movie title"
+    type="text"
+    value="test"
+  />
+  <span
+    className="search_icon"
+    onClick={[Function]}
+    role="presentation"
+  >
+    ↩
+  </span>
+</form>
+`;
+
 exports[`Search render renders with genres correctly 1`] = `
 <form
   onSubmit={[Function]}
@@ -86,12 +130,24 @@ exports[`Search render renders with title correctly 1`] = `
     }
   }
 >
-  <Search
-    fetchSearchMovies={[Function]}
-    searchBy="title"
-    searchRequest="test"
-    sortBy="release_date"
-    updateSearchRequest={[Function]}
-  />
+  <MemoryRouter>
+    <Search
+      fetchSearchMovies={[Function]}
+      history={
+        Object {
+          "push": [MockFunction],
+        }
+      }
+      location={
+        Object {
+          "search": "test",
+        }
+      }
+      searchBy="title"
+      searchRequest="test"
+      sortBy="release_date"
+      updateSearchRequest={[Function]}
+    />
+  </MemoryRouter>
 </Context.Provider>
 `;

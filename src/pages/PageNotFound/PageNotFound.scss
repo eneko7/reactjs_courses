@@ -1,0 +1,39 @@
+@import "../../assets/constants/constants.scss";
+
+.page_not_found_wrap {
+  padding: 3% 15%;
+  background-color: #f3efef96;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  min-height: 48vh;
+
+  .page_not_found_wrap__title {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .page_not_found_wrap__title:first-child {
+    color: $roseColor;
+  }
+}
+
+@media (max-width: $fulhdDesktop) {
+  .page_not_found_wrap {
+    padding: 1% $leftPaddingLaptop;
+  }
+}
+
+@media (max-width: $laptop) {
+  .page_not_found_wrap {
+    padding: 3% $leftPaddingTablet;
+  }
+}
+
+@media (max-width: $tablet) {
+  .page_not_found_wrap {
+    padding: 5% 5%;
+  }
+}

@@ -2,6 +2,8 @@
 
 exports[`MovieElement MovieElement -> Click on Movie card (open) 1`] = `ReactWrapper {}`;
 
+exports[`MovieElement MovieElement -> Click on Movie card (open) and scroll up 1`] = `ReactWrapper {}`;
+
 exports[`MovieElement renders correctly 1`] = `
 <div
   className="movie_element"
@@ -27,6 +29,7 @@ exports[`MovieElement renders correctly 1`] = `
     </span>
   </div>
   <Genres
+    classGenres=""
     data={
       Array [
         "Drama",
@@ -37,3 +40,5 @@ exports[`MovieElement renders correctly 1`] = `
 `;
 
 exports[`MovieElement renders without data correctly 1`] = `null`;
+
+exports[`MovieElement renders without data correctly 2`] = `ReactWrapper {}`;

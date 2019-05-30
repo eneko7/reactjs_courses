@@ -1,10 +1,10 @@
 import { connect } from 'react-redux';
 import MoviesGrid from './MoviesGrid';
 import { fetchDefaultMovies, fetchNextMovies } from '../../modules/movies/moviesActions';
-import { getMovies, getIsFetchingMovies, getIsFetchedMovies } from '../../modules/movies/moviesSelectors';
+import { getMoviesState, getIsFetchingMovies, getIsFetchedMovies } from '../../modules/movies/moviesSelectors';
 
 const mapStateToProps = state => ({
-  movies: getMovies(state),
+  movies: getMoviesState(state),
   isFetchingMovies: getIsFetchingMovies(state),
   isFetchedMovies: getIsFetchedMovies(state),
 });

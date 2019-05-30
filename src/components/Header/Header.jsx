@@ -9,9 +9,14 @@ import styles from './Header.scss';
 class Header extends Component {
   searchHeandler = () => {
     const {
-      searchRequest, sortBy, searchBy, fetchSearchMovies,
+      searchRequest, sortBy, searchBy, fetchSearchMovies, history,
     } = this.props;
     fetchSearchMovies(searchRequest, searchBy, sortBy);
+    if (searchRequest !== '') {
+      history.push(`/search?query=${searchRequest}&searchBy=${searchBy}&sortBy=${sortBy}`);
+    } else {
+      history.push('');
+    }
   };
 
   render() {
@@ -24,18 +29,23 @@ class Header extends Component {
         <Search />
         <div className={styles.header__search_controls}>
           <SearchBy />
-          <Button text="search" onClick={this.searchHeandler} />
+          <Button classButton="header_button" text="search" onClick={this.searchHeandler} />
         </div>
       </header>
     );
   }
 }
 
+Header.defaultProps = {
+  searchRequest: '',
+};
+
 Header.propTypes = {
-  searchRequest: PropTypes.string.isRequired,
+  searchRequest: PropTypes.string,
   sortBy: PropTypes.string.isRequired,
   searchBy: PropTypes.string.isRequired,
   fetchSearchMovies: PropTypes.func.isRequired,
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Header;

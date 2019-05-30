@@ -11,7 +11,7 @@ export const updateFilterSearch = searchBy => (dispatch) => {
 
 export const updateFilterSort = (searchRequest, searchBy, sortBy) => (dispatch) => {
   dispatch(dataSet({ sortBy }));
-  dispatch(fetchSearchMovies(searchRequest, searchBy, sortBy));
+  return dispatch(fetchSearchMovies(searchRequest, searchBy, sortBy));
 };
 
 export const updateSearchRequest = searchRequest => (dispatch) => {

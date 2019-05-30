@@ -1,0 +1,88 @@
+@import "../../assets/constants/constants.scss";
+
+.movie_details {
+  height: 63vh;
+  background-image: url('../../assets/images/netflix-image.jpg');
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 3;
+  padding: 1% 15%;
+  min-height: 260px;
+
+  .top_line {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 3;
+    margin-bottom: 20px;
+  }
+
+  .main {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+
+    .wrapper_right {
+      padding: 2% 0 0 5%;
+      width: 70%;
+
+      .movie_titile {
+        color: $roseColor;
+        font-family: $fontFamilyBold;
+        font-size: 40px;
+      }
+
+      .wrapper_year_and_time {
+        margin-bottom: 30px;
+
+        .year,
+        .time {
+          color: #fff;
+          font-family: $fontFamilyBold;
+          margin-right: 10%;
+        }
+      }
+
+      .movie_description {
+        color: #fff;
+        font-family: $fontFamilyRegular;
+        font-size: 21px;
+        line-height: 32px;
+      }
+    }
+  }
+}
+
+.movie_details::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+@media (max-width: $fulhdDesktop) {
+  .movie_details {
+    padding: 1% $leftPaddingLaptop;
+  }
+}
+
+@media (max-width: $laptop) {
+  .movie_details {
+    padding: 1% $leftPaddingTablet;
+  }
+}
+
+@media (max-width: $tablet) {
+  .movie_details {
+    padding: 1% 5%;
+    height: 32vh;
+  }
+}

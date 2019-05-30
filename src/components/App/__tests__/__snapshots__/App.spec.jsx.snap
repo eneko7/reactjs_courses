@@ -4,11 +4,31 @@ exports[`App renders correctly 1`] = `
 <main
   className="main"
 >
-  <ErrorBoundary>
-    <Connect(Header) />
-    <Connect(ResultLine) />
-    <Connect(MoviesGrid) />
-    <Footer />
-  </ErrorBoundary>
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/search"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/movies"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/movie/:id"
+    />
+    <Route
+      component={[Function]}
+      path="*"
+    />
+  </Switch>
 </main>
 `;

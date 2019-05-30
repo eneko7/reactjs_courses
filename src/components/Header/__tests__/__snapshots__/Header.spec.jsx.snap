@@ -66,6 +66,72 @@ exports[`Header click render 1`] = `
 </header>
 `;
 
+exports[`Header click render 2`] = `
+<header
+  className="header"
+>
+  <span
+    className="logo"
+  >
+    NetflixRoulette
+  </span>
+  <div
+    className="header__find_your_movie"
+  >
+    <span
+      className="header__find_your_movie_span"
+    >
+      FIND YOUR MOVIE
+    </span>
+  </div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="search_input"
+      name="search"
+      onChange={[Function]}
+      placeholder="Enter movie title"
+      type="text"
+      value=""
+    />
+    <span
+      className="search_icon"
+      onClick={[Function]}
+      role="presentation"
+    >
+      ↩
+    </span>
+  </form>
+  <div
+    className="header__search_controls"
+  >
+    <div
+      className="search_by_wrapper"
+    >
+      <span
+        className="search_by_title"
+      >
+        SEARCH BY
+      </span>
+      <div>
+        test
+      </div>
+      <div>
+        test
+      </div>
+    </div>
+    <button
+      className="header_button"
+      onClick={[Function]}
+      type="button"
+    >
+      search
+    </button>
+  </div>
+</header>
+`;
+
 exports[`Header renders correctly 1`] = `
 <Context.Provider
   value={
@@ -88,11 +154,18 @@ exports[`Header renders correctly 1`] = `
     }
   }
 >
-  <Header
-    fetchSearchMovies={[Function]}
-    searchBy="title"
-    searchRequest="test"
-    sortBy="release_date"
-  />
+  <MemoryRouter>
+    <Header
+      fetchSearchMovies={[Function]}
+      history={
+        Object {
+          "push": [MockFunction],
+        }
+      }
+      searchBy="title"
+      searchRequest="test"
+      sortBy="release_date"
+    />
+  </MemoryRouter>
 </Context.Provider>
 `;

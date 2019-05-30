@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import SortInput from './SortInput';
 import { updateFilterSearch, updateFilterSort, updateSearchRequest } from '../../modules/filter/filterActions';
 import { fetchSearchMovies } from '../../modules/movies/moviesActions';
@@ -16,4 +17,4 @@ const mapDispatchToProps = {
   updateFilterSort,
   fetchSearchMovies,
 };
-export default connect(mapStateToProps, mapDispatchToProps)(SortInput);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SortInput));
