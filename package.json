@@ -105,7 +105,7 @@
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
     "stylelint-scss": "^3.5.4",
-    "tar": ">=4.4.2",
+    "tar": ">=4.4.15",
     "terser-webpack-plugin": "^1.2.3",
     "webpack-dev-middleware": "^3.6.1",
     "webpack-hot-middleware": "^2.24.3",
